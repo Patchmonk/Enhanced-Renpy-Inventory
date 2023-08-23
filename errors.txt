@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/scripts/inventory.rpy", line 11: expected an indented block
+        def remove_item(self, item, quantity=1):
+         ^
+
+Ren'Py Version: Ren'Py 8.1.1.23060707
+Wed Aug 23 23:46:33 2023

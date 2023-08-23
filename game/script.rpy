@@ -14,8 +14,11 @@ label start:
     show Grassland
     python: 
         inventory = Inventory()
-        inventory.add_item("apple", quantity=3)
- 
+        inventory.add_item("apple", quantity=99)
+        inventory.add_item("fish", quantity=5)
+        inventory.add_item("apple", quantity=99)
+        inventory.add_item("log", quantity=99)
+      
 
     # These display lines of dialogue.
 

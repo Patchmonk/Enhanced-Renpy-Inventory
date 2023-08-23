@@ -1,81 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 19, in script
-    e "You've created a new Ren'Py game."
-  File "game/script.rpy", line 19, in script
-    e "You've created a new Ren'Py game."
-  File "game/scripts/inventory_screen.rpy", line 1, in execute
-    screen inventoryScreen():
-  File "game/scripts/inventory_screen.rpy", line 1, in execute
-    screen inventoryScreen():
-  File "game/scripts/inventory_screen.rpy", line 3, in execute
-    frame style style["inventory_frame"]:
-  File "game/scripts/inventory_screen.rpy", line 9, in execute
-    $ slot_count = inventory.slot_count
-  File "game/scripts/inventory_screen.rpy", line 9, in <module>
-    $ slot_count = inventory.slot_count
-NameError: name 'inventory' is not defined
+  File "game/script.rpy", line 15, in script
+    python:
+  File "game/script.rpy", line 20, in <module>
+    inventory,add_item("log", quantity=99)
+NameError: name 'add_item' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\bootstrap.py", line 275, in bootstrap
-    renpy.main.main()
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\main.py", line 670, in main
-    run(restart)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\main.py", line 144, in run
-    renpy.execution.run_context(True)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\execution.py", line 953, in run_context
-    context.run()
-  File "game/script.rpy", line 19, in script
-    e "You've created a new Ren'Py game."
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 444, in raise_
-  File "game/script.rpy", line 19, in script
-    e "You've created a new Ren'Py game."
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\ast.py", line 930, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\exports.py", line 1473, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\character.py", line 1352, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\character.py", line 1003, in do_display
-    display_say(who,
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\character.py", line 693, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\ui.py", line 299, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\display\core.py", line 3579, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\display\core.py", line 4052, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\display\core.py", line 681, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\display\core.py", line 681, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\display\core.py", line 681, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\display\screen.py", line 476, in visit_all
-    callback(self)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\display\core.py", line 4052, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\display\screen.py", line 487, in per_interact
-    self.update()
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\display\screen.py", line 680, in update
-    self.screen.function(**self.scope)
-  File "game/scripts/inventory_screen.rpy", line 1, in execute
-    screen inventoryScreen():
-  File "game/scripts/inventory_screen.rpy", line 1, in execute
-    screen inventoryScreen():
-  File "game/scripts/inventory_screen.rpy", line 3, in execute
-    frame style style["inventory_frame"]:
-  File "game/scripts/inventory_screen.rpy", line 9, in execute
-    $ slot_count = inventory.slot_count
-  File "game/scripts/inventory_screen.rpy", line 9, in <module>
-    $ slot_count = inventory.slot_count
-NameError: name 'inventory' is not defined
+  File "game/script.rpy", line 15, in script
+    python:
+  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 20, in <module>
+    inventory,add_item("log", quantity=99)
+NameError: name 'add_item' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.1.23060707
 Advanced renpy inventory 1.0
-Wed Aug 23 22:19:37 2023
+Thu Aug 24 00:16:51 2023

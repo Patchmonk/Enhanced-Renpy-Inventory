@@ -30,13 +30,13 @@ style Inv_item_name is text:
     size 16
     bold True
     color Color((216, 0, 108, 255))
-    pos (0,118)
+    pos (0,0)  
 
 style Inv_item_quantity is text:
     size 16
     bold True
     color Color((216, 0, 108, 255))
-    pos (115,0)  
+    pos (0,118)  
 
 style item_quantity is text:
     size 16
