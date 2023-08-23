@@ -18,8 +18,7 @@ label start:
         inventory.add_item("fish", quantity=5)
         inventory.add_item("apple", quantity=99)
         inventory.add_item("log", quantity=99)
-      
-
+        
     # These display lines of dialogue.
 
     e "You've created a new Ren'Py game."
