@@ -1,0 +1,72 @@
+init python:
+    class Inventory:
+        def __init__(self, slot_count=21):
+            self.slots = [[] for _ in range(slot_count)]  # Each slot starts as an empty list
+            self.max_items_per_slot = 99
+
+        def add_item(self, item):
+            for slot in self.slots:
+                if slot and slot[0] == item and len(slot) < self.max_items_per_slot:
+                    slot.append(item)
+                    return
+
+            # If item couldn't be stacked, find an empty slot to add it
+            for slot in self.slots:
+                if not slot:
+                    slot.append(item)
+                    return
+
+            # No available slots to add the item
+            return "Not enough space in the inventory"
+
+        def remove_item(self, item):
+                for slot in self.slots:
+                    if slot and slot[0] == item:
+                        slot.pop()
+                        if not slot:
+                            self.slots.remove(slot)
+                        return
+
+                return "Item not found in the inventory"
+
+
+            
+
+        def get_items(self):
+            return self.items
+        
+
+        
+# name of the character.
+define e = Character("Eileen")
+    
+image Forest = "Forest.png"
+
+# Global currency
+
+default gold = 1000
+label start:
+    show screen HUD
+
+    # To set up the initial state of the inventory we have to create an instance of the inventory class
+    python:
+        inventory = Inventory()
+        inventory.add_item("apple")
+        inventory.add_item("apple")
+        inventory.add_item("apple")
+        inventory.add_item("apple")
+        inventory.add_item("Log")
+
+    show Forest
+  
+    # These display lines of dialogue.
+    e "You've created a new Ren'Py game."
+    e "Once you add a story, pictures, and music, you can release it to the world!"
+    # This ends the game.
+    $ inventory.remove_item("Log")
+    e "One item Removed."
+    "Now you can chack the inventory"
+  
+return
+    
+         
