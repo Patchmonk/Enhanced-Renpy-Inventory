@@ -6,14 +6,14 @@ image Forest = "Forest.png"
 image Grassland = "Grassland.png"
 define e = Character("Eileen")
 default gold = 0
-
+default inventory = Inventory()
 # The game starts here.
 
 label start:
     show screen HUD
     show Grassland
     python: 
-        inventory = Inventory()
+        
         inventory.add_item("apple", quantity=99)
         inventory.add_item("fish", quantity=5)
         inventory.add_item("apple", quantity=99)

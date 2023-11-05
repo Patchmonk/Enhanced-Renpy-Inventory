@@ -1,0 +1,25 @@
+# Exclude rpyc files, except the ones in old-game
+*.rpyc
+!old-game/**
+
+*.rpyc~
+*.rpymc
+*.rpy~
+log.txt
+*.save
+*.psd
+.vscode/
+game/saves/persistent
+*.bak
+cache/
+
+game/cache/bytecode.rpyb
+game/cache/pyanalysis.rpyb
+game/cache/screens.rpyb
+game/saves/navigation.json
+traceback.txt
+errors.txt
+game/saves/navigation.json
+game/script_version.txt
+project.json
+game/saves/sync/**
