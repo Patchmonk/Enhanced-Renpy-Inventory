@@ -17,7 +17,8 @@ label start:
         inventory.add_item("apple", quantity=99)
         inventory.add_item("fish", quantity=5)
         inventory.add_item("apple", quantity=99)
-        inventory.add_item("log", quantity=99)
+        inventory.add_item("log", quantity=99) 
+        inventory.add_item("Mana_ram", quantity=5) 
         
     # These display lines of dialogue.
 
