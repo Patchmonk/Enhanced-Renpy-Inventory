@@ -1,34 +1,39 @@
-# Exclude rpyc files, except the ones in old-game
+# Ignore compiled Ren'Py script files, except the ones in old-game
 *.rpyc
 !old-game/**
 
+# Ignore temporary or backup files
 *.rpyc~
 *.rpymc
 *.rpy~
-log.txt
-*.save
-*.psd
-.vscode/
-game/saves/persistent
 *.bak
-cache/
 
+# Ignore log files
+log.txt
+traceback.txt
+errors.txt
+
+# Ignore save files
+*.save
+game/saves/persistent
+game/saves/navigation.json
+game/saves/sync/**
+
+# Ignore IDE-specific files
+.vscode/
+
+# Ignore Photoshop files
+*.psd
+
+# Ignore project-specific files
+project.json
+game/script_version.txt
+
+# Ignore cache files
+cache/
+game/cache/
 game/cache/bytecode.rpyb
 game/cache/pyanalysis.rpyb
 game/cache/screens.rpyb
-game/saves/navigation.json
-traceback.txt
-errors.txt
-game/saves/navigation.json
-game/script_version.txt
-project.json
-game/saves/sync/**
-game/cache/bytecode-39.rpyb
 game/cache/bytecode-39.rpyb
 game/cache/py3analysis.rpyb
-game/cache/bytecode-39.rpyb
-/game/cache
-game/cache/py3analysis.rpyb
-game/cache/screens.rpyb
-/game/cache
-/game/cache
