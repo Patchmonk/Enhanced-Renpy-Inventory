@@ -1,60 +1,94 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 24, in script
+  File "game/script.rpy", line 25, in script
     e "You've created a new Ren'Py game."
-TypeError: unhashable type: 'RevertableList'
+  File "game/scripts/inventory_screen.rpy", line 1, in execute
+    screen inventoryScreen():
+  File "game/scripts/inventory_screen.rpy", line 1, in execute
+    screen inventoryScreen():
+  File "game/scripts/inventory_screen.rpy", line 3, in execute
+    frame:
+  File "game/scripts/inventory_screen.rpy", line 14, in execute
+    vbox:
+  File "game/scripts/inventory_screen.rpy", line 18, in execute
+    viewport id "vp":
+  File "game/scripts/inventory_screen.rpy", line 32, in execute
+    vpgrid cols 7:
+  File "game/scripts/inventory_screen.rpy", line 37, in execute
+    for slot in range(slot_count):
+  File "game/scripts/inventory_screen.rpy", line 38, in execute
+    frame:
+  File "game/scripts/inventory_screen.rpy", line 40, in execute
+    if slot < len(inventory.get_items()):
+  File "game/scripts/inventory_screen.rpy", line 42, in execute
+    add Image("images/inventory/" + inventory.get_items()[slot] + ".png", xalign=0.5, yalign=0.5)
+  File "game/scripts/inventory_screen.rpy", line 42, in <module>
+    add Image("images/inventory/" + inventory.get_items()[slot] + ".png", xalign=0.5, yalign=0.5)
+KeyError: 0
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 24, in script
+  File "game/script.rpy", line 25, in script
     e "You've created a new Ren'Py game."
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\ast.py", line 930, in execute
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\ast.py", line 2573, in execute
+    Say.execute(self)
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\ast.py", line 615, in execute
     renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\exports.py", line 1474, in say
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\exports\sayexports.py", line 132, in say
     who(what, *args, **kwargs)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\character.py", line 1352, in __call__
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\character.py", line 1455, in __call__
     self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\character.py", line 1003, in do_display
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\character.py", line 1106, in do_display
     display_say(who,
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\character.py", line 693, in display_say
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\character.py", line 803, in display_say
     rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\ui.py", line 299, in interact
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\ui.py", line 301, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\display\core.py", line 3582, in interact
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\core.py", line 2215, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\display\core.py", line 4055, in interact_core
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\core.py", line 2745, in interact_core
     root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\display\core.py", line 684, in visit_all
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\displayable.py", line 434, in visit_all
     d.visit_all(callback, seen)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\display\core.py", line 684, in visit_all
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\displayable.py", line 434, in visit_all
     d.visit_all(callback, seen)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\display\core.py", line 684, in visit_all
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\displayable.py", line 434, in visit_all
     d.visit_all(callback, seen)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\display\screen.py", line 481, in visit_all
-    self.child.visit_all(callback, seen=None)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\display\core.py", line 684, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\display\core.py", line 684, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\display\core.py", line 684, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\display\core.py", line 686, in visit_all
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\screen.py", line 480, in visit_all
     callback(self)
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\display\core.py", line 4055, in <lambda>
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\core.py", line 2745, in <lambda>
     root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\display\behavior.py", line 1065, in per_interact
-    super(Button, self).per_interact()
-  File "C:\Users\Sanzid\Desktop\Renpy\renpy-8.1.0-sdk\renpy\display\layout.py", line 1265, in per_interact
-    size_group = self.style.size_group
-  File "gen3-static/styleclass.pxi", line 525, in renpy.styledata.styleclass.Style.size_group.__get__
-  File "style.pyx", line 493, in renpy.style.StyleCore._get
-  File "style.pyx", line 679, in renpy.style.build_style
-  File "style.pyx", line 138, in renpy.style.get_full_style
-TypeError: unhashable type: 'RevertableList'
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/scripts/inventory_screen.rpy", line 1, in execute
+    screen inventoryScreen():
+  File "game/scripts/inventory_screen.rpy", line 1, in execute
+    screen inventoryScreen():
+  File "game/scripts/inventory_screen.rpy", line 3, in execute
+    frame:
+  File "game/scripts/inventory_screen.rpy", line 14, in execute
+    vbox:
+  File "game/scripts/inventory_screen.rpy", line 18, in execute
+    viewport id "vp":
+  File "game/scripts/inventory_screen.rpy", line 32, in execute
+    vpgrid cols 7:
+  File "game/scripts/inventory_screen.rpy", line 37, in execute
+    for slot in range(slot_count):
+  File "game/scripts/inventory_screen.rpy", line 38, in execute
+    frame:
+  File "game/scripts/inventory_screen.rpy", line 40, in execute
+    if slot < len(inventory.get_items()):
+  File "game/scripts/inventory_screen.rpy", line 42, in execute
+    add Image("images/inventory/" + inventory.get_items()[slot] + ".png", xalign=0.5, yalign=0.5)
+  File "game/scripts/inventory_screen.rpy", line 42, in <module>
+    add Image("images/inventory/" + inventory.get_items()[slot] + ".png", xalign=0.5, yalign=0.5)
+KeyError: 0
 
 Windows-10-10.0.19045 AMD64
-Ren'Py 8.1.3.23091805
+Ren'Py 8.3.3.24111502
 Advanced renpy inventory 1.0
-Sun Nov  5 18:51:43 2023
+Sun Jan 12 22:13:03 2025

@@ -14,12 +14,15 @@ label start:
     show Grassland
     python: 
         
-        inventory.add_item("apple", quantity=99)
+        inventory.add_item("apple", quantity=199)
         inventory.add_item("fish", quantity=5)
         inventory.add_item("apple", quantity=99)
-        inventory.add_item("log", quantity=99) 
-        inventory.add_item("Mana_ram", quantity=5) 
+        inventory.add_item("log", quantity=99)
+        inventory.add_item("Map", quantity=9) 
+        inventory.add_item("log", quantity=999)
         
+
+ 
     # These display lines of dialogue.
 
     e "You've created a new Ren'Py game."
