@@ -26,6 +26,11 @@ label start:
         inventory.add_item("hurricane ", quantity=1)
      
         
+# Initialize the inventory
+ 
+
+# Increase the slot count by 14 (for example)
+        inventory.increase_slot_count(14)  # Slot count is now 35
 
  
     # These display lines of dialogue.

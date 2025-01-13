@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/components/inventory_system/inventory_style.rpy", line 54: style property textbox_yalign is not known.
-    textbox_yalign 0.1
-                  ^
+File "game/components/inventory_system/inventory.rpy", line 3: expected an indented block
+    def __init__(self, slot_count=21, unlocked_slots=7):
+     ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Mon Jan 13 16:16:01 2025
+Mon Jan 13 18:48:30 2025

@@ -1,4 +1,4 @@
-2025-01-13 10:37:14 UTC
+2025-01-13 12:41:06 UTC
 Windows-10-10.0.19045
 Ren'Py 8.3.3.24111502
 
@@ -19,18 +19,18 @@ Initial gc took 0.04s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.35s
+Creating interface object took 0.36s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
-Load screen analysis took 0.04s
+Load screen analysis took 0.03s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
-Prepare screens took 0.07s
+Prepare screens took 0.06s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.03s
+Save bytecode. took 0.04s
 Running _start took 0.00s
-Interface start took 0.09s
+Interface start took 0.08s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -44,24 +44,24 @@ Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
 Maximum texture size: 4096x4096
 
 Full traceback:
-  File "game/script.rpy", line 37, in script
-    $ inventory.increase_slot_count(7)
+  File "game/script.rpy", line 17, in script
+    python:
   File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\ast.py", line 821, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/script.rpy", line 37, in <module>
-    $ inventory.increase_slot_count(7)
-AttributeError: 'Inventory' object has no attribute 'increase_slot_count'
+  File "game/script.rpy", line 19, in <module>
+    inventory.slot_count(35)
+TypeError: 'int' object is not callable
 
 While running game code:
-  File "game/script.rpy", line 37, in script
-    $ inventory.increase_slot_count(7)
-  File "game/script.rpy", line 37, in <module>
-    $ inventory.increase_slot_count(7)
-AttributeError: 'Inventory' object has no attribute 'increase_slot_count'
+  File "game/script.rpy", line 17, in script
+    python:
+  File "game/script.rpy", line 19, in <module>
+    inventory.slot_count(35)
+TypeError: 'int' object is not callable
 Resetting cache.
-Early init took 64.74s
+Early init took 79.90s
 Loading error handling took 0.03s
 Loading script took 0.17s
 Loading save slot metadata took 0.03s
@@ -71,7 +71,177 @@ Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.03s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Sanzid\\AppData\\Roaming/RenPy/backups\\Advanced renpy inventory':
+Backing up script files to 'C:\\Users\\Sanzid\\AppData\\Roaming/RenPy/backups\\Enhanced Renpy Inventory':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.31s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.36'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 17, in script
+    python:
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    inventory.slot_count(35)
+TypeError: 'int' object is not callable
+
+While running game code:
+  File "game/script.rpy", line 17, in script
+    python:
+  File "game/script.rpy", line 19, in <module>
+    inventory.slot_count(35)
+TypeError: 'int' object is not callable
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+
+Full traceback:
+  File "game/script.rpy", line 17, in script
+    python:
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    inventory.slot_count(35)
+TypeError: 'int' object is not callable
+
+While running game code:
+  File "game/script.rpy", line 17, in script
+    python:
+  File "game/script.rpy", line 19, in <module>
+    inventory.slot_count(35)
+TypeError: 'int' object is not callable
+Resetting cache.
+Early init took 271.63s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Sanzid\\AppData\\Roaming/RenPy/backups\\Enhanced Renpy Inventory':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.32s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.36'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 17, in script
+    python:
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    inventory.slot_count(35)
+TypeError: 'int' object is not callable
+
+While running game code:
+  File "game/script.rpy", line 17, in script
+    python:
+  File "game/script.rpy", line 19, in <module>
+    inventory.slot_count(35)
+TypeError: 'int' object is not callable
+Resetting cache.
+Early init took 444.70s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+
+File "game/components/inventory_system/inventory.rpy", line 3: expected an indented block
+    def __init__(self, slot_count=21, unlocked_slots=7):
+     ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.44s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.36'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 468.04s
+Loading error handling took 0.02s
+Loading script took 0.14s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Sanzid\\AppData\\Roaming/RenPy/backups\\Enhanced Renpy Inventory':
 Dump and make backups took 0.06s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
@@ -79,7 +249,229 @@ Initial gc took 0.04s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.32s
+Creating interface object took 0.30s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.36'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 17, in script
+    python:
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    inventory.slot_count(35)
+TypeError: 'int' object is not callable
+
+While running game code:
+  File "game/script.rpy", line 17, in script
+    python:
+  File "game/script.rpy", line 19, in <module>
+    inventory.slot_count(35)
+TypeError: 'int' object is not callable
+Resetting cache.
+Early init took 540.31s
+Loading error handling took 0.02s
+Loading script took 0.14s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Sanzid\\AppData\\Roaming/RenPy/backups\\Enhanced Renpy Inventory':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.30s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.36'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 17, in script
+    python:
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    inventory.slot_count(35)
+TypeError: 'int' object is not callable
+
+While running game code:
+  File "game/script.rpy", line 17, in script
+    python:
+  File "game/script.rpy", line 19, in <module>
+    inventory.slot_count(35)
+TypeError: 'int' object is not callable
+Resetting cache.
+Early init took 566.81s
+Loading error handling took 0.02s
+Loading script took 0.14s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Sanzid\\AppData\\Roaming/RenPy/backups\\Enhanced Renpy Inventory':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.31s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.36'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 17, in script
+    python:
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    inventory.slot_count(35)
+TypeError: 'int' object is not callable
+
+While running game code:
+  File "game/script.rpy", line 17, in script
+    python:
+  File "game/script.rpy", line 19, in <module>
+    inventory.slot_count(35)
+TypeError: 'int' object is not callable
+Resetting cache.
+Early init took 589.33s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Sanzid\\AppData\\Roaming/RenPy/backups\\Enhanced Renpy Inventory':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.30s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.36'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 791.47s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Sanzid\\AppData\\Roaming/RenPy/backups\\Enhanced Renpy Inventory':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.30s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s

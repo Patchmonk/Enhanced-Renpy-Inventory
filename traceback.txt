@@ -1,26 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 37, in script
-    $ inventory.increase_slot_count(7)
-  File "game/script.rpy", line 37, in <module>
-    $ inventory.increase_slot_count(7)
-AttributeError: 'Inventory' object has no attribute 'increase_slot_count'
+  File "game/script.rpy", line 17, in script
+    python:
+  File "game/script.rpy", line 19, in <module>
+    inventory.slot_count(35)
+TypeError: 'int' object is not callable
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 37, in script
-    $ inventory.increase_slot_count(7)
+  File "game/script.rpy", line 17, in script
+    python:
   File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\ast.py", line 821, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/script.rpy", line 37, in <module>
-    $ inventory.increase_slot_count(7)
-AttributeError: 'Inventory' object has no attribute 'increase_slot_count'
+  File "game/script.rpy", line 19, in <module>
+    inventory.slot_count(35)
+TypeError: 'int' object is not callable
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.3.24111502
 Advanced renpy inventory 1.0
-Mon Jan 13 16:37:21 2025
+Mon Jan 13 18:50:33 2025
