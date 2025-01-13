@@ -10,7 +10,7 @@ init python:
             remaining_quantity = quantity
 
             # First, try to fill existing stacks of the same item
-            for slot in range(self.unlocked_slots):  # Iterate only through unlocked slots
+            for slot in range(self.unlocked_slots):
                 if item in self.slots[slot]:
                     space_left = self.max_items_per_slot - self.slots[slot][item]
                     if space_left > 0:
@@ -18,11 +18,11 @@ init python:
                         self.slots[slot][item] += add_quantity
                         remaining_quantity -= add_quantity
                         if remaining_quantity == 0:
-                            return  # All items added
+                            return
 
             # If there's still quantity to add, find empty slots
             for slot in range(self.unlocked_slots):
-                if not self.slots[slot]:  # Check for empty slot using truthiness
+                if not self.slots[slot]:
                     add_quantity = min(remaining_quantity, self.max_items_per_slot)
                     self.slots[slot][item] = add_quantity
                     remaining_quantity -= add_quantity
@@ -56,3 +56,5 @@ init python:
 
         def is_slot_unlocked(self, slot):
             return slot < self.unlocked_slots
+
+ 

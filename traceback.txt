@@ -1,32 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 193, in script
-    python:
-  File "renpy/common/00start.rpy", line 194, in <module>
-    renpy.execute_default_statement(True)
-  File "game/scripts/inventory.rpy", line 61, in execute_default
-    default inventory = Inventory(slot_count=21, unlocked_slots=7)
-Exception: store.inventory is being given a default a second time.
+  File "game/script.rpy", line 37, in script
+    $ inventory.increase_slot_count(7)
+  File "game/script.rpy", line 37, in <module>
+    $ inventory.increase_slot_count(7)
+AttributeError: 'Inventory' object has no attribute 'increase_slot_count'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00start.rpy", line 193, in script
-    python:
+  File "game/script.rpy", line 37, in script
+    $ inventory.increase_slot_count(7)
   File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\ast.py", line 821, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "renpy/common/00start.rpy", line 194, in <module>
-    renpy.execute_default_statement(True)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\exports\statementexports.py", line 372, in execute_default_statement
-    i.execute_default(start)
-  File "game/scripts/inventory.rpy", line 61, in execute_default
-    default inventory = Inventory(slot_count=21, unlocked_slots=7)
-Exception: store.inventory is being given a default a second time.
+  File "game/script.rpy", line 37, in <module>
+    $ inventory.increase_slot_count(7)
+AttributeError: 'Inventory' object has no attribute 'increase_slot_count'
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.3.24111502
 Advanced renpy inventory 1.0
-Mon Jan 13 12:37:24 2025
+Mon Jan 13 16:37:21 2025

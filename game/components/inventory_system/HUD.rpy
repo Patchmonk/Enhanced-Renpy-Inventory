@@ -15,21 +15,14 @@ screen HUD():
             action Show("inventoryScreen")
             padding (10, 10, 10, 10)
 
+# backpack icon 
 image Backpack:
-    "images/inventory/inventory_gui/backpack.png"
+    "components/inventory_system/images/gui/backpack.png"
     size(60,60) 
-
-# backpack icon     
+    
 image Backpack_Hover:
-    "images/inventory/inventory_gui/backpack_hover.png"
+    "components/inventory_system/images/gui/backpack_hover.png"
     size(60,60) 
 
-image close:
-    "images/inventory/inventory_gui/close.png"
-    size(30,30) 
 
-# backpack icon     
-image close_hover:
-    "images/inventory/inventory_gui/close_hover.png"
-    size(30,30) 
  
