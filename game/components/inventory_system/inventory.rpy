@@ -1,3 +1,4 @@
+
 init python:
     class Inventory:
         def __init__(self, slot_count=21, unlocked_slots=7):
@@ -8,7 +9,7 @@ init python:
 
         def add_item(self, item, quantity=1):
             if self.unlocked_slots == 0:
-                self.show_error("No unlocked slots available.")
+                show_custom_notification("No unlocked slots available.")
                 return
 
             remaining_quantity = quantity
@@ -35,15 +36,15 @@ init python:
             
             # If there are still remaining items, show a notification
             if remaining_quantity > 0:
-                self.show_error(f"Could not add {remaining_quantity} {item} - no slots available.")
+                show_custom_notification(f"Could not add {remaining_quantity} {item} - no slots available.")
 
-        def show_error(self, message):
-            renpy.play("audio/error.wav")  # Play error sound
-            renpy.show_screen("error_notification", message=message)  # Show custom notification screen
-            renpy.pause(3.0)  # Delay for 3 seconds
- 
- 
         def remove_item(self, item, quantity=1):
+            if quantity <= 0:
+                show_custom_notification("Invalid quantity to remove.")
+                return
+
+            original_quantity = quantity
+
             for slot in range(self.slot_count):
                 if item in self.slots[slot]:
                     if quantity >= self.slots[slot][item]:
@@ -54,6 +55,11 @@ init python:
                         quantity = 0
                     if quantity <= 0:
                         break
+
+            if quantity > 0:
+                show_custom_notification(f"Could not fully remove {original_quantity} {item}(s) - insufficient quantity.")
+            else:
+                show_custom_notification(f"Removed {original_quantity - quantity} {item}(s).")
 
         def unlock_slots(self, count):
             self.unlocked_slots = min(self.slot_count, self.unlocked_slots + count)

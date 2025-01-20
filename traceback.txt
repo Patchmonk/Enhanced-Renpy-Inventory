@@ -1,61 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 43, in script
-    e "You've created a new Ren'Py game."
-Exception: Style 'Pm_notifi' does not exist.
+  File "game/components/inventory_system/inventory.rpy", line 2, in script
+    init python:
+  File "game/components/inventory_system/inventory.rpy", line 3, in <module>
+    from Custom_notification import show_custom_notification  # Import the custom notification function
+ModuleNotFoundError: No module named 'Custom_notification'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 43, in script
-    e "You've created a new Ren'Py game."
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\ast.py", line 2573, in execute
-    Say.execute(self)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\ast.py", line 615, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\exports\sayexports.py", line 132, in say
-    who(what, *args, **kwargs)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\character.py", line 1455, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\character.py", line 1106, in do_display
-    display_say(who,
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\character.py", line 803, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\core.py", line 2215, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\core.py", line 2745, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\screen.py", line 485, in visit_all
-    self.child.visit_all(callback, seen=None)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\displayable.py", line 436, in visit_all
-    callback(self)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\core.py", line 2745, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\text\text.py", line 2225, in per_interact
-    if self.style.slow_abortable:
-  File "gen3-static/styleclass.pxi", line 613, in renpy.styledata.styleclass.Style.slow_abortable.__get__
-  File "style.pyx", line 493, in renpy.style.StyleCore._get
-  File "style.pyx", line 686, in renpy.style.build_style
-  File "style.pyx", line 142, in renpy.style.get_full_style
-  File "style.pyx", line 98, in renpy.style.get_style
-Exception: Style 'Pm_notifi' does not exist.
+  File "game/components/inventory_system/inventory.rpy", line 2, in script
+    init python:
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/components/inventory_system/inventory.rpy", line 3, in <module>
+    from Custom_notification import show_custom_notification  # Import the custom notification function
+ModuleNotFoundError: No module named 'Custom_notification'
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.3.24111502
 Advanced renpy inventory 1.0
-Mon Jan 20 16:38:28 2025
+Mon Jan 20 17:41:31 2025
