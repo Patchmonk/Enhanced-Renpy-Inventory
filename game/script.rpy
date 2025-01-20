@@ -51,7 +51,7 @@ label start:
     $ inventory.remove_item("apple", quantity=200)
     # This ends the game.
     "Successfully remove 200 items"
-    "Successfully remove 200 items"
+    show screen inventoryScreen
     "Successfully remove 200 items"
     return
  

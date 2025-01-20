@@ -59,6 +59,19 @@ init python:
                 show_custom_notification(f"Could not fully remove {original_quantity} {item}(s) - insufficient quantity.", sound_type="error")
             else:
                 show_custom_notification(f"Removed {original_quantity - quantity} {item}(s).", sound_type="remove")
+                self.sort_inventory()  # Call sort_inventory after removal
+
+        def sort_inventory(self):
+            sorted_slots = [{} for _ in range(self.slot_count)]
+            current_slot = 0
+
+            for slot in range(self.slot_count):
+                if self.slots[slot]:
+                    sorted_slots[current_slot] = self.slots[slot]
+                    current_slot += 1
+
+            self.slots = sorted_slots
+ 
 
 
         def unlock_slots(self, count):
