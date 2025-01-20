@@ -48,7 +48,7 @@ label start:
     $ inventory.increase_slot_count(14)  # Slot count is now 35
     "You've increased 14  additional inventory slots!"
     " Awesome more slots!"
-    # $ inventory.remove_item("apple", quantity=200)
+    $ inventory.remove_item("apple", quantity=200)
     # This ends the game.
     "Successfully remove 200 items"
     "Successfully remove 200 items"

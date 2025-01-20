@@ -1,4 +1,3 @@
-
 init python:
     class Inventory:
         def __init__(self, slot_count=21, unlocked_slots=7):
@@ -9,7 +8,7 @@ init python:
 
         def add_item(self, item, quantity=1):
             if self.unlocked_slots == 0:
-                show_custom_notification("No unlocked slots available.")
+                show_custom_notification("No unlocked slots available.", sound_type="error")
                 return
 
             remaining_quantity = quantity
@@ -36,11 +35,11 @@ init python:
             
             # If there are still remaining items, show a notification
             if remaining_quantity > 0:
-                show_custom_notification(f"Could not add {remaining_quantity} {item} - no slots available.")
+                show_custom_notification(f"Could not add {remaining_quantity} {item} - no slots available.", sound_type="error")
 
         def remove_item(self, item, quantity=1):
             if quantity <= 0:
-                show_custom_notification("Invalid quantity to remove.")
+                show_custom_notification("Invalid quantity to remove.", sound_type="error")
                 return
 
             original_quantity = quantity
@@ -57,9 +56,10 @@ init python:
                         break
 
             if quantity > 0:
-                show_custom_notification(f"Could not fully remove {original_quantity} {item}(s) - insufficient quantity.")
+                show_custom_notification(f"Could not fully remove {original_quantity} {item}(s) - insufficient quantity.", sound_type="error")
             else:
-                show_custom_notification(f"Removed {original_quantity - quantity} {item}(s).")
+                show_custom_notification(f"Removed {original_quantity - quantity} {item}(s).", sound_type="remove")
+
 
         def unlock_slots(self, count):
             self.unlocked_slots = min(self.slot_count, self.unlocked_slots + count)
