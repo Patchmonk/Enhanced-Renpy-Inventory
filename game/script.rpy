@@ -9,14 +9,19 @@ default gold = 300
 # Inventory initialization
 default inventory = Inventory(slot_count=21, unlocked_slots=7)
 
-# The game starts here.
- 
- 
+
+# The start of the game
 label start:
+
+ 
+ 
+  
+
+ 
     show screen HUD
     show Grassland
     python: 
-        inventory.unlock_slots(5)
+       
         
         inventory.add_item("apple", quantity=200)
         inventory.add_item("fish", quantity=5)
@@ -30,7 +35,7 @@ label start:
  
 
 # Increase the slot count by 14 (for example)
-        inventory.increase_slot_count(14)  # Slot count is now 35
+        
 
  
     # These display lines of dialogue.
@@ -38,11 +43,15 @@ label start:
     e "You've created a new Ren'Py game."
 
     e "Once you add a story, pictures, and music, you can release it to the world!"
-     
  
-    "You've unlocked 7 additional inventory slots!"
+
+    $ inventory.increase_slot_count(14)  # Slot count is now 35
+    "You've increased 14  additional inventory slots!"
     " Awesome more slots!"
-
+    $ inventory.remove_item("apple", quantity=200)
     # This ends the game.
-
+    "Successfully remove 200 items"
+    "Successfully remove 200 items"
+    "Successfully remove 200 items"
     return
+ 

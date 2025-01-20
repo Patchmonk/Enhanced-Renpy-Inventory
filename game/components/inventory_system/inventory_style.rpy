@@ -64,6 +64,3 @@ style hud_frame is frame:
 
  
  
- 
- 
- 

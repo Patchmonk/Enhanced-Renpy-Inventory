@@ -18,10 +18,12 @@ screen inventoryScreen():
                 draggable True
                 mousewheel True
                 scrollbars "vertical"
-                vscrollbar_xsize 10
-                vscrollbar_ysize 475
+                vscrollbar_xsize 8
+                vscrollbar_ysize 470
                 vscrollbar_ypos 0
-                vscrollbar_xpos -35
+                vscrollbar_xpos -40
+
+                
                 vpgrid cols 7:
                     style "inventory_grid"
 

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/components/inventory_system/inventory.rpy", line 3: expected an indented block
-    def __init__(self, slot_count=21, unlocked_slots=7):
-     ^
+File "game/components/inventory_system/Inventory Notify.rpy", line 23: style property pass is not known.
+    pass
+        ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Mon Jan 13 18:48:30 2025
+Mon Jan 20 16:39:14 2025

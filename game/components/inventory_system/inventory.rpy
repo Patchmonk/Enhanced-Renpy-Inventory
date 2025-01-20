@@ -7,7 +7,13 @@ init python:
             self.slots = [{} for _ in range(self.slot_count)]
 
         def add_item(self, item, quantity=1):
+            if self.unlocked_slots == 0:
+                self.show_error("No unlocked slots available.")
+                return
+
             remaining_quantity = quantity
+            
+            # First, try to add to existing slots with the same item
             for slot in range(self.unlocked_slots):
                 if item in self.slots[slot]:
                     space_left = self.max_items_per_slot - self.slots[slot][item]
@@ -17,6 +23,8 @@ init python:
                         remaining_quantity -= add_quantity
                         if remaining_quantity == 0:
                             return
+
+            # Next, try to add to empty slots
             for slot in range(self.unlocked_slots):
                 if not self.slots[slot]:
                     add_quantity = min(remaining_quantity, self.max_items_per_slot)
@@ -24,9 +32,17 @@ init python:
                     remaining_quantity -= add_quantity
                     if remaining_quantity == 0:
                         return
+            
+            # If there are still remaining items, show a notification
             if remaining_quantity > 0:
-                print(f"Could not add {remaining_quantity} {item}(s) - no slots available.")
+                self.show_error(f"Could not add {remaining_quantity} {item} - no slots available.")
 
+        def show_error(self, message):
+            renpy.play("audio/error.wav")  # Play error sound
+            renpy.show_screen("error_notification", message=message)  # Show custom notification screen
+            renpy.pause(3.0)  # Delay for 3 seconds
+ 
+ 
         def remove_item(self, item, quantity=1):
             for slot in range(self.slot_count):
                 if item in self.slots[slot]:
