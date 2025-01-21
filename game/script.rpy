@@ -9,6 +9,8 @@ image screenshot_1 = "Screenshot_1.png"
 image screenshot_2 = "Screenshot_2.png"
 image screenshot_3 = "Screenshot_3.png"
 image screenshot_4 = "Screenshot_4.png"
+image screenshot_5 = "Screenshot_5.png"
+image screenshot_6 = "Screenshot_6.png"
 define e = Character("Eileen")
 define p = Character("Patchmonk")
 default gold = 300
@@ -144,19 +146,67 @@ label start:
     "This is how you can call the remove item function, In the second parameter you can tell the inventory How many you want to add. Super simple isn't it?"
     
     # Remove items from the inventory
-    $ inventory.remove_item("apple", quantity=200)
+    $ inventory.remove_item("apple", quantity=99)
 
     hide screenshot_4
+    "Our trusty notification system strikes again! It flashed a message and played that oh-so-familiar removal sound, the one that only chimes when items vanish into thin air. As always, feel free to tweak those notifications to match your game’s whims whenever you like."
+
     "The fun part about the removing function is that it calls the sort function, which shuffles the inventory like a deck of cards."
     
     "So, you don't have to stress about plucking an item from the middle of the inventory crate. Every time you remove something, it will reshuffle itself!"
+    
+    "I suppose I should also mention that the inventory will play different notifications with sounds based on various scenarios. You can customize all of this to suit your needs."
+
+    "Our Inventory is smart enough to alert you if something goes wrong. For example, we currently have 10 pomegranates in our inventory. If you accidentally try to remove 200 of them, which you don't have, what's going to happen? Let's find out!"
+    
+    $ inventory.remove_item("Pomegranate", quantity=99)
+
+    
+    show screen inventory
+    "As you can see, it successfully removed all the items we had, but couldn't remove what we didn't have. That's why we got an error. It gives you a heads-up with a popup message and plays the error sound. Oops, looks like it's time to double-check our inventory!"
 
     "Now you can add items, remove items, and create your own items. We have all the basic inventory features. I guess we have a complete inventory system now. Hmmm... why do I have this nagging feeling, like last time, that I'm forgetting something?"
 
-    "Hold on a sec... I've just remembered that I promised we'd discuss the locking stuff. Yeah, now I recall you can lock the slots like in those big title games. I was totally inspired by those game inventory!"
+    "Hold on a sec... I've just remembered that I promised we'd discuss the locking stuff. Yeah, now I recall you can lock the slots like in those big title games. I was totally inspired by those games inventory!"
 
     "Alright let's show you how you can unlock all those slot slot in the inventory first. This time also the same like before we have to call our unlock slot function"
 
+    show screenshot_5
     "First, let us demonstrate how to unlock all the slots in the inventory. Like before, we need to call our unlock slot function."
-
     
+    hide screenshot_5
+
+    # Unlock new slots
+    $ inventory.unlock_slots(14)
+
+    show screen inventory
+
+    "All our inventory slots are unlocked. That's pretty awesome, right?"
+
+    "By now, you probably know I have a knack for getting carried away. I even created a lock function that can lock all the slots or just a specific number of slots."
+
+    "Honestly, I have no idea what was going through my mind at the time. But imagine if there's a scenario in your game where the character's magic inventory slots get locked due to a curse or something. That's totally possible, right?"
+
+    "Sure, it's not the most common thing, but it doesn't hurt to have it there. It's like one of those items you're hording, just chilling quietly in the background. You don't have to use it if you don't want to."
+
+    "Alright let's lock up few slots to demonstrate this function."
+    
+    # Lock some slots
+    $ inventory.lock_slots(7)
+
+    show screen inventory
+    "Kind of depressing, isn't it? After unlocking all the slots, suddenly we lock this row of slots. I'm already feeling really bad, who knows how the player would react to such a thing. Crazy, isn't it? "
+
+    "I can't be the only one getting a twisted sense of satisfaction from this. If you're grinning right now, no judgment here, just saying."
+
+
+
+
+
+
+
+
+
+
+
+
