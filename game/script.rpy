@@ -153,4 +153,8 @@ label start:
 
     "Now you can add items, remove items, and create your own items. We have all the basic inventory features. I guess we have a complete inventory system now. Hmmm... why do I have this nagging feeling, like last time, that I'm forgetting something?"
 
-  
+    "Hold on a sec... I've just remembered that I promised we'd discuss the locking stuff. Yeah, now I recall you can lock the slots like in those big title games. I was totally inspired by those game inventory!"
+
+    "Alright let's show you how you can unlock all those slot slot in the inventory first. This time also the same like before we have to call our unlock slot function"
+
+    "First, let us demonstrate how to unlock all the slots in the inventory. Like before, we need to call our unlock slot function."
