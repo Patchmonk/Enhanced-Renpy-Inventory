@@ -6,7 +6,9 @@ image inventoryicons = "inventoryicons.png"
 image Forest = "Forest.png"
 image Grassland = "Grassland.png"
 image screenshot_1 = "Screenshot_1.png"
-image screenshot_2 = "screenshot_2.png"
+image screenshot_2 = "Screenshot_2.png"
+image screenshot_3 = "Screenshot_3.png"
+image screenshot_4 = "Screenshot_4.png"
 define e = Character("Eileen")
 define p = Character("Patchmonk")
 default gold = 300
@@ -64,10 +66,10 @@ label start:
     hide inventoryicons
 
     "After replacing the default icons with your own item icons, we need to inform the inventory that it's now an item."
-
-    "Since we already have all the images in the icon folder, let's call the add_item function from the inventory system like this:"
-
-    show Screenshot_3
+    show screenshot_3
+    "Since we already have all the images in the icon folder, let's call the add_item function from the inventory system like this screenshot."
+    hide screenshot_3
+    
     # Add items to the inventory
     $ inventory.add_item("apple", quantity=1)
     $ inventory.add_item("Peach", quantity=1)
@@ -85,20 +87,20 @@ label start:
 
     "Some of you might be thinking, 'Yeah, yeah, we've seen it before. You added some items to the inventory. What's the difference?'"
 
-    "My dear friend, unlike the previous inventory which only had basic features, this one has some advanced stuff. Yep, you guessed it—stackable items!"
+    "My dear friend, unlike the previous inventory which only had basic features, this one has some advanced stuff. Yep, you guessed it right it's stackable items!"
 
     "Alright, let's add nine more items to each item slot to test this feature."
  
-    # Add items to the inventory
+    # Adding 9 More items on each category.
     $ inventory.add_item("apple", quantity=9)
     $ inventory.add_item("Peach", quantity=9)
     $ inventory.add_item("Strawberry", quantity=9)
     $ inventory.add_item("Pear", quantity=9)
     $ inventory.add_item("Orange", quantity=9)  
-    $ inventory.add_item("Pomegranate", quantity=19)
+    $ inventory.add_item("Pomegranate", quantity=9)
     show screen inventory
 
-    "All the item counts have increased—isn't it awesome? With stackable items, players can hoard all the items they want in an RPG."
+    "All the item counts have increased isn't it awesome? With stackable items, players can hoard all the items they want."
 
     "Now you can stack items up to 99 per slot. You can always customize the item limit per slot. The system will automatically take care of redistributing items to existing slots if the items already exist in the inventory."
 
@@ -115,14 +117,40 @@ label start:
     "Alright, let's flood our inventory with tons of items to check what our inventory is capable of and enjoy these fancy pop-ups and notifications like those fancy games."
 
     "Any moment now, the fancy pop-up will show up with a three-second delay. Just hold up, do not click anything, and enjoy."
+    
+    #Flooding the inventory with tons of items.
     $ inventory.add_item("apple", quantity=99)
     $ inventory.add_item("Peach", quantity=99)
+    
     "Ha ha! You saw it, right? Cool, isn't it? I told you at the very beginning that I get carried away with this thing. It's super simple but fancy!"
 
-    "This is why I involved this simple function in the inventory system. I made sure it's modular so you can use it for other game notifications to inform your players about gameplay things."
+    "Alright let's check our inventory that error is correct or not? it should Occupy all the available unlock slots."
+    
+    show screen inventory
+    
+    "Awesome, all slots are occupied right now. We can't add any more items except for the existing slots up to the slot limit. If you're wondering about the other locked icon slot, we'll come back to this later in the tutorial. Let's complete the basic features first."
 
-    "If you don't want such features, I totally get it. It might not be suitable for your game. In that case, you can return nothing. You'll find a section in my code where I'm calling the show_custom_notification function—you can edit that. It's super simple!"
+    "The simple notification component is modular. I made sure it's modular so you can use it for other game notifications to inform your players about gameplay things."
+
+    "If you don't want such features, I totally get it. It might not be suitable for your game. In that case, you can return nothing. You'll find a section in my code where I'm calling the show_custom_notification function you can edit that. It's super simple!"
 
     "Alright, now you know how to add items, overflow the inventory, handle errors, and show notifications. We've come so far. So, what's next? Removing items, of course!"
 
+    "How can we remove items from the inventory? If you're wondering how to use the function and how it works, don't worry, we will explore everything."    
 
+
+    "If you're guessing to remove item you have to call the remove item function you're absolutely correct"
+    show screenshot_4
+    "This is how you can call the remove item function, In the second parameter you can tell the inventory How many you want to add. Super simple isn't it?"
+    
+    # Remove items from the inventory
+    $ inventory.remove_item("apple", quantity=200)
+
+    hide screenshot_4
+    "The fun part about the removing function is that it calls the sort function, which shuffles the inventory like a deck of cards."
+    
+    "So, you don't have to stress about plucking an item from the middle of the inventory crate. Every time you remove something, it will reshuffle itself!"
+
+    "Now you can add items, remove items, and create your own items. We have all the basic inventory features. I guess we have a complete inventory system now. Hmmm... why do I have this nagging feeling, like last time, that I'm forgetting something?"
+
+  
