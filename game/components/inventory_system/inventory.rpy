@@ -71,20 +71,28 @@ init python:
                     current_slot += 1
 
             self.slots = sorted_slots
- 
 
-
-        def unlock_slots(self, count):
-            self.unlocked_slots = min(self.slot_count, self.unlocked_slots + count)
-
-        def get_items(self):
-            return self.slots
-
-        def is_slot_unlocked(self, slot):
-            return slot < self.unlocked_slots
 
         def increase_slot_count(self, additional_slots):
             self.slot_count += additional_slots
             self.slots.extend([{} for _ in range(additional_slots)])
+            
 
- 
+        def unlock_slots(self, count):
+            self.unlocked_slots = min(self.slot_count, self.unlocked_slots + count)
+            show_custom_notification(f"Unlocked {count} new slots.", sound_type="success")
+
+
+        def is_slot_unlocked(self, slot):
+            return slot < self.unlocked_slots
+
+
+        def lock_slots(self, count):
+            if count <= self.unlocked_slots:
+                self.unlocked_slots -= count
+                show_custom_notification(f"Locked {count} slots.", sound_type="success")
+            else:
+                show_custom_notification("Not enough unlocked slots to lock.", sound_type="error")
+
+        def get_items(self):
+            return self.slots

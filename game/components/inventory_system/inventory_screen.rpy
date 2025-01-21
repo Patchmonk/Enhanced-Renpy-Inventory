@@ -1,4 +1,4 @@
-screen inventoryScreen():
+screen inventory():
     modal True
     frame :
         style "inventory_frame"
@@ -7,7 +7,7 @@ screen inventoryScreen():
                 style "close_btn"
                 idle "close" 
                 hover "close_hover"
-                action Hide("inventoryScreen")
+                action Hide("inventory")
 
         vbox:
             style "inventory_container"

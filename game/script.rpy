@@ -2,56 +2,127 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
+image inventoryicons = "inventoryicons.png"
 image Forest = "Forest.png"
 image Grassland = "Grassland.png"
+image screenshot_1 = "Screenshot_1.png"
+image screenshot_2 = "screenshot_2.png"
 define e = Character("Eileen")
+define p = Character("Patchmonk")
 default gold = 300
+
+
+
 # Inventory initialization
 default inventory = Inventory(slot_count=21, unlocked_slots=7)
 
 
 # The start of the game
 label start:
-
- 
- 
-  
-
- 
-    show screen HUD
+    
     show Grassland
-    python: 
-       
-        
-        inventory.add_item("apple", quantity=200)
-        inventory.add_item("fish", quantity=5)
-        inventory.add_item("apple", quantity=99)
-        inventory.add_item("log", quantity=199)
-        inventory.add_item("map", quantity=9)  
-        inventory.add_item("hurricane ", quantity=1)
-     
-        
-# Initialize the inventory
+    "Hello friend, welcome to my Enhanced Inventory System tutorial. I'm not sure how you ended up here, but you're in for a treat. If you haven't heard of it, this is the improved version of the simple inventory system."
+    "The system relies on two components: a custom notification system and the main inventory system, both nestled in the component folder."
+    "So, why is the notification system tangled up with the inventory? Well, I got a bit carried away with my love for fancy sounds and flashy error and success messages. But hey, you can always untangle this mess by editing the code."
+    "Don't worry it's super easy you can just return nothing in the function where I call the notification in the main inventory functions. "
+    "Now that you're all caught up on the main components and dependencies, it's time to dive into setting this up for your own project. Buckle up, because it's going to be a wild ride!"
+    "Just kidding, it's going to be smooth as butter! I made sure it's super easy so anyone can follow along. I mean, as long as you understand basic Ren'py functionality and a little bit of Python syntax."
+    
+    show screenshot_1
+    "Alright, let's get back to business. How do we set up this inventory system in your project? It's as easy as pie, just like its predecessor. Just copy the component folder in your game directory."
+    
+    "The next step is super simple you have to initialize the variable."
+    hide screenshot_1
+    show screenshot_2
+    "To initialize the variable, you need to create it first and define its parameter before the game starts. It's like setting up your chess pieces before the match begins!"
+    "In the screenshot, there are two parameters. The first parameter specifies that the inventory will start with 21 slots. The second parameter designates 7 slots as unlocked from the initial 21 slots, while the remaining slots will be locked."
+    "While the rest are locked tighter than treasure chests. You can tweak this setup to match your game style."
+    hide screenshot_2
+
+    "Alright, now that you've mastered the inventory setup, let's jump into the fun part the awesome features of this inventory  system!"
+
+    "Just like its predecessor, we'll be rocking the heads-up display with a stylish backpack Icon probably the same one, but who knows? "
+    "Designing icons isn't exactly my superpower, but I had to whip up a bunch for this project because the original icon pack author decided to vanish into thin air along with his repository and license. So, I ended up crafting my own icon pack from scratch."
+    
+    "Now I will activate the HUD screen to display the inventory image button, similar to the previous inventory. However, please be advised that we must close the inventory each time by clicking the cross button; otherwise, we will not be able to continue the tutorial."
+    show screen HUD
+    "You can open the backpack by clicking the backpack icon to open the inventory system. And don't forget to close it with the cross button in the top right corner, or else The game will stay as like pause mode"
+    show screen inventory
+
+
+    "As you can see, this is an empty inventory. You might be wondering why all the inventory slots have a locked icon. Well, it's obvious because they are locked. This is one of my inventory features. Quite creative, right? Or, you know, who knows. "
+
+    "I've seen it in those big RPG titles where inventory slots are locked, making you grind like crazy. Why not do the same in our small VN? We can always reward the player by unlocking the slots."
+
+    "But hey, it's your call! This is just one of the default features I whipped up. No pressure to use it if you don't want to. We'll save the lock talk for later. First, let's dive into adding the items."
+
+    "An empty inventory is as exciting as watching paint dry. Let's spice things up by adding some items and watch this baby come to life! But first, we need to learn how to add those items."
+
+    show inventoryicons
+    "Adding items is a piece of cake! Just head over to the game/components/inventorySystem/images/icons folder and start dropping in your images. Just like those dummy item icons. Easy peasy!"
+    "You can edit replace do whatever you want don't forget to remember the dimension of the image and the name is super important as well."
+    hide inventoryicons
+
+    "After replacing the default icons with your own item icons, we need to inform the inventory that it's now an item."
+
+    "Since we already have all the images in the icon folder, let's call the add_item function from the inventory system like this:"
+
+    show Screenshot_3
+    # Add items to the inventory
+    $ inventory.add_item("apple", quantity=1)
+    $ inventory.add_item("Peach", quantity=1)
+    $ inventory.add_item("Strawberry", quantity=1)
+    $ inventory.add_item("Pear", quantity=1)
+    $ inventory.add_item("Orange", quantity=1)  
+    $ inventory.add_item("Pomegranate", quantity=1)
+
+
+    "We've added some items to the inventory. Let's take a look!"
+
+    show screen inventory
+
+    "Yay, now we are overflowing with items! Our inventory is almost full, and it always gives me a sense of over-accomplishment when something is nearly maxed out. You know that feeling, right?"
+
+    "Some of you might be thinking, 'Yeah, yeah, we've seen it before. You added some items to the inventory. What's the difference?'"
+
+    "My dear friend, unlike the previous inventory which only had basic features, this one has some advanced stuff. Yep, you guessed it—stackable items!"
+
+    "Alright, let's add nine more items to each item slot to test this feature."
  
+    # Add items to the inventory
+    $ inventory.add_item("apple", quantity=9)
+    $ inventory.add_item("Peach", quantity=9)
+    $ inventory.add_item("Strawberry", quantity=9)
+    $ inventory.add_item("Pear", quantity=9)
+    $ inventory.add_item("Orange", quantity=9)  
+    $ inventory.add_item("Pomegranate", quantity=19)
+    show screen inventory
 
-# Increase the slot count by 14 (for example)
-        
+    "All the item counts have increased—isn't it awesome? With stackable items, players can hoard all the items they want in an RPG."
 
- 
-    # These display lines of dialogue.
+    "Now you can stack items up to 99 per slot. You can always customize the item limit per slot. The system will automatically take care of redistributing items to existing slots if the items already exist in the inventory."
 
-    e "You've created a new Ren'Py game."
+    "If the items exceed the defined slot limit, they'll be stored in the next available unlocked slot. Pretty cool, right?"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
- 
+    "If you're wondering what happens if we don't have any slots left and we try to add more items, let me tell you."
 
-    $ inventory.increase_slot_count(14)  # Slot count is now 35
-    "You've increased 14  additional inventory slots!"
-    " Awesome more slots!"
-    $ inventory.remove_item("apple", quantity=200)
-    # This ends the game.
-    "Successfully remove 200 items"
-    show screen inventoryScreen
-    "Successfully remove 200 items"
-    return
- 
+    "Well, my friend, I thought about that too! That's why I added a custom notification function to handle such situations. It'll give you an error with a fancy sound and a pop-up message."
+
+    "The fun part about this notification system is that you can customize it to your heart's content. You can use it for other game stuff, customize the style, and the sound too."
+
+    "When a player unlocks something, you can use the notification function to notify them with an accomplishment sound or something."
+
+    "Alright, let's flood our inventory with tons of items to check what our inventory is capable of and enjoy these fancy pop-ups and notifications like those fancy games."
+
+    "Any moment now, the fancy pop-up will show up with a three-second delay. Just hold up, do not click anything, and enjoy."
+    $ inventory.add_item("apple", quantity=99)
+    $ inventory.add_item("Peach", quantity=99)
+    "Ha ha! You saw it, right? Cool, isn't it? I told you at the very beginning that I get carried away with this thing. It's super simple but fancy!"
+
+    "This is why I involved this simple function in the inventory system. I made sure it's modular so you can use it for other game notifications to inform your players about gameplay things."
+
+    "If you don't want such features, I totally get it. It might not be suitable for your game. In that case, you can return nothing. You'll find a section in my code where I'm calling the show_custom_notification function—you can edit that. It's super simple!"
+
+    "Alright, now you know how to add items, overflow the inventory, handle errors, and show notifications. We've come so far. So, what's next? Removing items, of course!"
+
+

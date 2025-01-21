@@ -12,7 +12,7 @@ screen HUD():
             xpos 0 ypos 0
             idle "Backpack"
             hover "Backpack_Hover"
-            action Show("inventoryScreen")
+            action Show("inventory")
             padding (10, 10, 10, 10)
 
 # backpack icon 
