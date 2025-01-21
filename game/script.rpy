@@ -158,3 +158,5 @@ label start:
     "Alright let's show you how you can unlock all those slot slot in the inventory first. This time also the same like before we have to call our unlock slot function"
 
     "First, let us demonstrate how to unlock all the slots in the inventory. Like before, we need to call our unlock slot function."
+
+    

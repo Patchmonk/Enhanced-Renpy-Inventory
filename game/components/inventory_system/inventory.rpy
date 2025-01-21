@@ -57,6 +57,7 @@ init python:
 
             if quantity > 0:
                 show_custom_notification(f"Could not fully remove {original_quantity} {item}(s) - insufficient quantity.", sound_type="error")
+                self.sort_inventory()  # Call sort_inventory after removal
             else:
                 show_custom_notification(f"Removed {original_quantity - quantity} {item}(s).", sound_type="remove")
                 self.sort_inventory()  # Call sort_inventory after removal
