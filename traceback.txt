@@ -1,66 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 47, in script
-    "Click the backpack to open the inventory system. And don't forget to close it with the cross button in the top right corner, or else Something bad might happen!"
-  File "renpy/common/00action_control.rpy", line 131, in __call__
-    renpy.show_screen(self.screen, *self.args, **self.kwargs)
-Exception: Screen inventoryScreen is not known.
-
+  File "game/script.rpy", line 214, in script
+    $ inventory.increase_slot_count(14)
+  File "game/script.rpy", line 214, in <module>
+    $ inventory.increase_slot_count(14)
+AttributeError: 'Inventory' object has no attribute 'increase_slot_count'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 47, in script
-    "Click the backpack to open the inventory system. And don't forget to close it with the cross button in the top right corner, or else Something bad might happen!"
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\ast.py", line 2573, in execute
-    Say.execute(self)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\ast.py", line 615, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\exports\sayexports.py", line 132, in say
-    who(what, *args, **kwargs)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\character.py", line 1455, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\character.py", line 1106, in do_display
-    display_say(who,
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\character.py", line 803, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\core.py", line 2215, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\core.py", line 3286, in interact_core
-    rv = root_widget.event(ev, x, y, 0)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\layout.py", line 1297, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\layout.py", line 1297, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\layout.py", line 1297, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\screen.py", line 793, in event
-    rv = self.child.event(ev, x, y, st)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\layout.py", line 1297, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\layout.py", line 1526, in event
-    rv = super(Window, self).event(ev, x, y, st)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\layout.py", line 285, in event
-    rv = d.event(ev, x - xo, y - yo, st)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\layout.py", line 1297, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\behavior.py", line 1182, in event
-    return handle_click(self.clicked)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\behavior.py", line 1103, in handle_click
-    rv = run(action)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\behavior.py", line 401, in run
-    return action(*args, **kwargs)
-  File "renpy/common/00action_control.rpy", line 131, in __call__
-    renpy.show_screen(self.screen, *self.args, **self.kwargs)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\display\screen.py", line 1327, in show_screen
-    raise Exception("Screen %s is not known.\n" % (name[0],))
-Exception: Screen inventoryScreen is not known.
-
+  File "game/script.rpy", line 214, in script
+    $ inventory.increase_slot_count(14)
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 214, in <module>
+    $ inventory.increase_slot_count(14)
+AttributeError: 'Inventory' object has no attribute 'increase_slot_count'
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.3.24111502
-Advanced renpy inventory 1.0
-Mon Jan 20 21:59:36 2025
+Advanced renpy inventory 1.2.5
+Wed Jan 22 23:53:08 2025

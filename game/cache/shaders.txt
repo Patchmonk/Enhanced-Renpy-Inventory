@@ -3,7 +3,7 @@ renpy.texture
 renpy.dissolve renpy.geometry
 renpy.alpha renpy.geometry renpy.texture
 renpy.geometry renpy.texture
-renpy.ftl
 renpy.solid
+renpy.ftl
 renpy.geometry renpy.solid
 renpy.alpha renpy.texture

@@ -77,7 +77,8 @@ init python:
         def increase_slot_count(self, additional_slots):
             self.slot_count += additional_slots
             self.slots.extend([{} for _ in range(additional_slots)])
-            
+            show_custom_notification(f"Slot count increased by {additional_slots}!", sound_type="success")
+
 
         def unlock_slots(self, count):
             self.unlocked_slots = min(self.slot_count, self.unlocked_slots + count)
