@@ -36,7 +36,7 @@ screen inventory():
                                 background Image("components/inventory_system/images/gui/slot_bg.png")
                                 if inventory.slots[slot]:
                                     for item, quantity in inventory.slots[slot].items():
-                                        add Image("components/inventory_system/images/icons/" + item + ".png") xalign 0.5 yalign 0.5 size (100, 100) 
+                                        add Image("components/inventory_system/images/icons/" + item + ".png") xalign 0.5 yalign 0.5 size (120, 120) 
                                         $ Inv_item_name = item.replace('_', ' ')
                                         $ Inv_item_quantity = f"x{quantity}"   
                                       
