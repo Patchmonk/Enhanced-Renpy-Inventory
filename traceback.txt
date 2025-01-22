@@ -1,26 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 214, in script
-    $ inventory.increase_slot_count(14)
-  File "game/script.rpy", line 214, in <module>
-    $ inventory.increase_slot_count(14)
-AttributeError: 'Inventory' object has no attribute 'increase_slot_count'
+After initialization, but before game start.
+  File "renpy/common/00start.rpy", line 83, in _init_language
+    renpy.change_language(language)
+  File "game/components/custom_notification/custom_notification_screen.rpy", line 13, in <module>
+    font bold
+NameError: name 'bold' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 214, in script
-    $ inventory.increase_slot_count(14)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\ast.py", line 821, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/script.rpy", line 214, in <module>
-    $ inventory.increase_slot_count(14)
-AttributeError: 'Inventory' object has no attribute 'increase_slot_count'
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\main.py", line 652, in main
+    run(restart)
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\main.py", line 75, in run
+    renpy.translation.init_translation()
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\translation\__init__.py", line 702, in init_translation
+    renpy.store._init_language() # type: ignore
+  File "renpy/common/00start.rpy", line 83, in _init_language
+    renpy.change_language(language)
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\translation\__init__.py", line 796, in change_language
+    new_change_language(tl, language)
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\translation\__init__.py", line 748, in new_change_language
+    i.apply()
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\ast.py", line 2800, in apply
+    value = renpy.python.py_eval(expr)
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/components/custom_notification/custom_notification_screen.rpy", line 13, in <module>
+    font bold
+NameError: name 'bold' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.3.24111502
 Advanced renpy inventory 1.2.5
-Wed Jan 22 23:53:08 2025
+Thu Jan 23 00:30:47 2025

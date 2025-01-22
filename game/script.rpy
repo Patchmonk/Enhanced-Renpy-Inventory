@@ -55,10 +55,9 @@ label start:
     show screen inventory
 
 
-    "As you can see, this is an empty inventory. You might be wondering why all the inventory slots have a locked icon. Well, it's obvious because they are locked. This is one of my inventory features. Quite creative, right? Or, you know, who knows. "
-
-    "I've seen it in those big RPG titles where inventory slots are locked, making you grind like crazy. Why not do the same in our small VN? We can always reward the player by unlocking the slots."
-
+    "As you can see, this inventory is currently empty. You may be curious as to why many of the inventory slots display a locked icon. The reason is that they are indeed locked. This is one of the features of my inventory system. Quite creative, isn't it? Or perhaps not."
+    
+    "You've probably seen it before in RPG games where locked inventory slots make you grind like a maniac. A handy feature, right? It spices up the game! Why not add the same feature to our game? We can always reward players by unlocking new slots."
     "But hey, it's your call! This is just one of the default features I whipped up. No pressure to use it if you don't want to. We'll save the lock talk for later. First, let's dive into adding the items."
 
     "An empty inventory is as exciting as watching paint dry. Let's spice things up by adding some items and watch this baby come to life! But first, we need to learn how to add those items."
@@ -119,8 +118,8 @@ label start:
 
     "Alright, let's flood our inventory with tons of items to check what our inventory is capable of and enjoy these fancy pop-ups and notifications like those fancy games."
 
-    "Any moment now, the fancy pop-up will show up with a three-second delay. Just hold up, do not click anything, and enjoy."
-    
+    "Now, if you hit the keyboard or click your mouse, a fancy popup notification will appear on your screen. Gaze at it for 3 seconds before proceeding to the next dialogue."
+
     #Flooding the inventory with tons of items.
     $ inventory.add_item("apple", quantity=99)
     $ inventory.add_item("Peach", quantity=99)
@@ -164,7 +163,7 @@ label start:
 
     
     show screen inventory
-    "As you can see, it successfully removed all the items we had, but couldn't remove what we didn't have. That's why we got an error. It gives you a heads-up with a popup message and plays the error sound. Oops, looks like it's time to double-check our inventory!"
+    "As you can see, it successfully removed all the items we had, but couldn't remove what we didn't have. That's why we got an error. It gives you a heads-up with a popup message and plays the error sound."
 
     "Now you can add items, remove items, and create your own items. We have all the basic inventory features. I guess we have a complete inventory system now."
 

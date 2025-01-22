@@ -4,7 +4,7 @@ init python:
             "default": "components/custom_notification/audio/notification.mp3",  # Default notification sound
             "error": "components/custom_notification/audio/error.mp3",           # Error notification sound
             "success": "components/custom_notification/audio/success.mp3",       # Success notification sound
-            "remove": "components/custom_notification/audio/remove.mp3", 
+            "remove": "components/custom_notification/audio/remove.mp3",         # remove notification sound   
             # Add more sound types here
         }
 
