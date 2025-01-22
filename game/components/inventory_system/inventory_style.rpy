@@ -41,7 +41,7 @@ style inventory_scrollbar is scrollbar:
     ysize 450
  
 style inventory_item_name is text:
-    size 16
+    size 14
     bold True
     color Color((216, 0, 108, 255))
     pos (0,0)
@@ -49,7 +49,7 @@ style inventory_item_name is text:
     
 
 style inventory_item_quantity is text:
-    size 16
+    size 12
     bold True
     color Color((255, 0, 149, 255))
     text_align 1.0
