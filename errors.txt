@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/components/inventory_system/inventory_screen.rpy", line 16: 'top_margin' is not a keyword argument or valid child of the hbox statement.
-    top_margin 50
-              ^
+File "game/components/inventory_system/inventory_style.rpy", line 24: style property Color is not known.
+    Color((222, 222, 222, 255))
+         ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Wed Jan 22 23:07:45 2025
+Wed Jan 22 23:35:32 2025
