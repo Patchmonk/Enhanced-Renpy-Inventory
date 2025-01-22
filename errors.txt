@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/components/inventory_system/Inventory Notify.rpy", line 23: style property pass is not known.
-    pass
-        ^
+File "game/components/inventory_system/HUD.rpy", line 17: 'lef_padding' is not a keyword argument or valid child of the imagebutton statement.
+    lef_padding 20
+               ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Mon Jan 20 16:39:14 2025
+Wed Jan 22 22:37:44 2025
