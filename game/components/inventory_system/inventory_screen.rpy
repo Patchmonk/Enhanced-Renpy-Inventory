@@ -21,9 +21,11 @@ screen inventory():
                 vscrollbar_xsize 8
                 vscrollbar_ysize 470
                 vscrollbar_ypos 0
-                vscrollbar_xpos -40
+                vscrollbar_xpos -37
+                vscrollbar_base_bar "components/inventory_system/images/gui/inv_vscrollbar_base_bar.png" 
+                vscrollbar_thumb "components/inventory_system/images/gui/inv_vscrollbar_thumb.png"
+                vscrollbar_unscrollable "hide"
 
-                
                 vpgrid cols 7:
                     style "inventory_grid"
 

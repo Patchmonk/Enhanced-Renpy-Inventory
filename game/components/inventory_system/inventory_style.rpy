@@ -11,8 +11,8 @@ style inventory_frame is frame:
     xalign 0.5
     yalign 0.3
     xsize 1180
-    ysize 620
-    background Color((0, 0, 0, 161))
+    ysize 600
+    background "components/inventory_system/images/gui/Inventory_frame_BG.png"
 
 style close_btn:
     xpos 1135
@@ -20,18 +20,21 @@ style close_btn:
     
 style inventory_title:
     size 40
-    line_spacing 20
-    
-    
+    pos (0, -40)
+
+
+ 
  
 style dummy is text:
     size 6
 style inventory_container is vbox:
+   
     xpos 30
-    ypos 30
+    ypos 50
 
 style inventory_grid is vpgrid:
     spacing 5
+   
  
 style inventory_scrollbar is scrollbar: 
     xsize 1105
