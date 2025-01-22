@@ -40,7 +40,7 @@ label start:
     show screenshot_2
     "To initialize the variable, you need to create it first and define its parameter before the game starts. It's like setting up your chess pieces before the match begins!"
     "In the screenshot, there are two parameters. The first parameter specifies that the inventory will start with 21 slots. The second parameter designates 7 slots as unlocked from the initial 21 slots, while the remaining slots will be locked."
-    "While the rest are locked tighter than treasure chests. You can tweak this setup to match your game style."
+    "While the rest are locked tighter than treasure chests. You can tweak this setup to match your game style. Don't worry I will show that until later in the tutorial."
     hide screenshot_2
 
     "Alright, now that you've mastered the inventory setup, let's jump into the fun part the awesome features of this inventory  system!"
@@ -50,7 +50,7 @@ label start:
     
     "Now I will activate the HUD screen to display the inventory image button, similar to the previous inventory. However, please be advised that we must close the inventory each time by clicking the cross button; otherwise, we will not be able to continue the tutorial."
     show screen HUD
-    "You can open the backpack by clicking the backpack icon to open the inventory system. And don't forget to close it with the cross button in the top right corner, or else The game will stay as like pause mode"
+    "You can open the backpack by clicking the backpack icon to open the inventory system. And don't forget to close it with the cross button in the top right corner, or else The game will stay as like pause mode."
     show screen inventory
 
 
@@ -110,7 +110,7 @@ label start:
 
     "If you're wondering what happens if we don't have any slots left and we try to add more items, let me tell you."
 
-    "Well, my friend, I thought about that too! That's why I added a custom notification function to handle such situations. It'll give you an error with a fancy sound and a pop-up message."
+    "My friend, I thought about that too! That's why I added a custom notification function to handle such situations. It'll give you an error with a fancy sound and a pop-up message."
 
     "The fun part about this notification system is that you can customize it to your heart's content. You can use it for other game stuff, customize the style, and the sound too."
 
@@ -123,7 +123,7 @@ label start:
     #Flooding the inventory with tons of items.
     $ inventory.add_item("apple", quantity=99)
     $ inventory.add_item("Peach", quantity=99)
-    
+   
     "Ha ha! You saw it, right? Cool, isn't it? I told you at the very beginning that I get carried away with this thing. It's super simple but fancy!"
 
     "Alright let's check our inventory that error is correct or not? it should Occupy all the available unlock slots."
@@ -141,15 +141,15 @@ label start:
     "How can we remove items from the inventory? If you're wondering how to use the function and how it works, don't worry, we will explore everything."    
 
 
-    "If you're guessing to remove item you have to call the remove item function you're absolutely correct"
+    "If you're guessing to remove item you have to call the remove item function you're absolutely correct."
     show screenshot_4
-    "This is how you can call the remove item function, In the second parameter you can tell the inventory How many you want to add. Super simple isn't it?"
+    "This is how you can call the remove item function, In the second parameter you can tell the inventory How many you want to remove. Super simple isn't it?"
     
     # Remove items from the inventory
     $ inventory.remove_item("apple", quantity=99)
 
     hide screenshot_4
-    "Our trusty notification system strikes again! It flashed a message and played that oh-so-familiar removal sound, the one that only chimes when items vanish into thin air. As always, feel free to tweak those notifications to match your game’s whims whenever you like."
+    "Our trusty notification system strikes again! It flashed a message and played that oh-so-familiar removal sound, the one that only chimes when items vanish into thin air. As always, feel free to tweak those notifications to match your game's whims whenever you like."
 
     "The fun part about the removing function is that it calls the sort function, which shuffles the inventory like a deck of cards."
     
@@ -165,11 +165,13 @@ label start:
     show screen inventory
     "As you can see, it successfully removed all the items we had, but couldn't remove what we didn't have. That's why we got an error. It gives you a heads-up with a popup message and plays the error sound. Oops, looks like it's time to double-check our inventory!"
 
-    "Now you can add items, remove items, and create your own items. We have all the basic inventory features. I guess we have a complete inventory system now. Hmmm... why do I have this nagging feeling, like last time, that I'm forgetting something?"
+    "Now you can add items, remove items, and create your own items. We have all the basic inventory features. I guess we have a complete inventory system now."
+
+    "Hmmm... why do I have this nagging feeling, like last time, that I'm forgetting something?"
 
     "Hold on a sec... I've just remembered that I promised we'd discuss the locking stuff. Yeah, now I recall you can lock the slots like in those big title games. I was totally inspired by those games inventory!"
 
-    "Alright let's show you how you can unlock all those slot slot in the inventory first. This time also the same like before we have to call our unlock slot function"
+    "Alright let's show you how you can unlock all those slot in the inventory first. This time also the same like before we have to call our unlock slot function"
 
     show screenshot_5
     "First, let us demonstrate how to unlock all the slots in the inventory. Like before, we need to call our unlock slot function."
@@ -197,16 +199,30 @@ label start:
     show screen inventory
     "Kind of depressing, isn't it? After unlocking all the slots, suddenly we lock this row of slots. I'm already feeling really bad, who knows how the player would react to such a thing. Crazy, isn't it? "
 
-    "I can't be the only one getting a twisted sense of satisfaction from this. If you're grinning right now, no judgment here, just saying."
+    "Well, we demonstrate our lock function. The thing is, I'm a bit of a softy, so I'm going to unlock the slot even though it's just a tutorial."
+    
+    $ inventory.unlock_slots(7)
+
+    "Well, we've talked a lot about slots. You're probably tired of hearing about them by now. I promise this is the last time I'll mention slots."
+    show screen inventory
+    "If you think about it, the default 21 slots might not cut it for your game. So, what do you do in such a scenario? Don't sweat it, we've got a function for that too!"
+
+    # Increase the slot count by 14
+    $ inventory.increase_slot_count(14)
+    show screen inventory
+    "We have seven slots per row, so I decided to add two new rows of slots, resulting in a total of 14 additional slots. You can drag the scroll bar to see additional slots."
+    
+    
 
 
+    "Well, I guess this is the grand finale of our tutorial! Thanks for sticking around despite my endless chatter. I'm thrilled about your interest in my project."
+ 
+    "I'd be thrilled if you could give me a shout-out by mentioning my name in your project! I put my heart into creating this, and it would mean the world to see it recognized and shared so others can enjoy it too."
+    
+    "If you ever want to connect, feel free to drop a hello! I might not be able to respond immediately, but I'll absolutely smile knowing someone appreciated my work."
+    
+    "Want to see what else I've been building? Check out my GitHub or Itch.io profile. I'm always tinkering with something new! "
 
+    "If you spot a bug or have ideas to make this even better, feel free to open an issue or submit a pull request on GitHub. I will make every effort to ensure the stability of this project, and I'd love your help shaping it!"
 
-
-
-
-
-
-
-
-
+    "Best of luck bringing your game to life. I hope it shines brightly and finds the success it deserves! Go create something unforgettable, and remember: every great game starts with a spark of passion. Yours is already glowing! 🔥"
