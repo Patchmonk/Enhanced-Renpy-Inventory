@@ -11,6 +11,7 @@ image screenshot_3 = "Screenshot_3.png"
 image screenshot_4 = "Screenshot_4.png"
 image screenshot_5 = "Screenshot_5.png"
 image screenshot_6 = "Screenshot_6.png"
+image screenshot_7 = "Screenshot_7.png"
 define e = Character("Eileen")
 define p = Character("Patchmonk")
 default gold = 300
@@ -206,10 +207,15 @@ label start:
     "Well, we've talked a lot about slots. You're probably tired of hearing about them by now. I promise this is the last time I'll mention slots."
     show screen inventory
     "If you think about it, the default 21 slots might not cut it for your game. So, what do you do in such a scenario? Don't sweat it, we've got a function for that too!"
-
+    show screenshot_7
+    "As always, we need to call the slot increase function. In the parameter, we define the number of slots we want to include."
+    
     # Increase the slot count by 14
     $ inventory.increase_slot_count(14)
+    hide screenshot_7
     show screen inventory
+   
+
     "We have seven slots per row, so I decided to add two new rows of slots, resulting in a total of 14 additional slots. You can drag the scroll bar to see additional slots."
     
     
