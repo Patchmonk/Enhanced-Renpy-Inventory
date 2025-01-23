@@ -207,6 +207,11 @@ label start:
     show screen inventory
     "If you think about it, the default 21 slots might not cut it for your game. So, what do you do in such a scenario? Don't sweat it, we've got a function for that too!"
     show screenshot_7
+    
+    "If you're worried that adding more slots will make the inventory grid explode from lack of space, fear not! Ren'Py's got your back with a handy scroll bar that will magically manage it all."
+
+    "It's already built into your screen code and ready to handle any number of slots. Just add more slots, and watch the scroll bar spring into action!"
+
     "As always, we need to call the slot increase function. In the parameter, we define the number of slots we want to include."
     
     # Increase the slot count by 14
@@ -214,11 +219,9 @@ label start:
     hide screenshot_7
     show screen inventory
    
+    "We've got seven slots per row, so I thought, why not add two more rows? Voilà, 14 extra slots! Just give that scroll bar a little nudge to check them out."
 
-    "We have seven slots per row, so I decided to add two new rows of slots, resulting in a total of 14 additional slots. You can drag the scroll bar to see additional slots."
-    
-    
-
+    "I fought off the temptation to add a few dozen more rows. Now it's your turn! Conquer that scrollbar by adjusting the value of the increase_slot_count function. Have fun!"
 
     "Well, I guess this is the grand finale of our tutorial! Thanks for sticking around despite my endless chatter. I'm thrilled about your interest in my project."
  
