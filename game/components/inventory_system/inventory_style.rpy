@@ -39,13 +39,14 @@ style inventory_scrollbar is scrollbar:
 style inventory_item_name is text:
     size 14
     bold True
-    color Color((222, 222, 222, 255))
-    pos (0,0)
+    color Color((251, 251, 251, 255))
+    pos (2,0)
+ 
 
 style inventory_item_quantity is text:
     size 12
     bold True
-    color Color((222, 222, 222, 255))
+    color Color((251, 251, 251, 255))
     text_align 1.0
     pos (135, 135)
     xanchor 1.0
