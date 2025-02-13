@@ -9,7 +9,7 @@ Oh, and about the tutorial... Listen, I'm not a tutorial wizard, but I tried my 
 
 
 
-## Key Features 🎮  
+## Key Features 🚀
 
 - **In-Game Tutorial**  
   I’m not saying it’s the best tutorial out there, but... well, I tried. It's a step-by-step guide on how to use the inventory system, and I added a bit of dialogue to keep it... *interesting.* So, give it a try, and if you find yourself cringing at any of the jokes, I totally understand.  
@@ -32,14 +32,14 @@ This inventory system is designed to be easy to use, flexible, and (hopefully) n
 
  
 
-## Installation & Integration 🔧  
+## Installation & Integration ⚙️  
 1. Copy the Python class into your Ren'Py project.  
 2. Adjust the slot count and item settings to your liking.  
 3. Open the game and let the tutorial walk you through everything (or laugh... or cringe).  
 
  
 
-## How to implement this system? 💡  
+## How to implement this system? 💻  
 ```renpy
 
 
@@ -68,14 +68,14 @@ $ inventory.increase_slot_count(5)
 
  
 
-## Compatibility & Requirements 💻  
+## Compatibility & Requirements 🛠️
 - **Engine**: Ren'Py (Tested on version 8.0 and above)  
 - **Language**: Python (Integrated with Ren'Py scripting)
 
  
  
 
-## Why This Exists:  
+## Why This Exists: 🤔 
 I’ve always found it weird that so many GitHub repos don’t have proper descriptions or tutorials. I mean, what's the point of sharing code if nobody knows how to use it? That’s why I made this inventory system easy to understand, with a tutorial that actually explains how it works step by step. Sure, I tried to make it a little fun, It’s just a friendly guide that’s more interesting than plain documentation.  
 
  
