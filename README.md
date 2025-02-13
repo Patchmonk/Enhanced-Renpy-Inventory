@@ -6,7 +6,9 @@ This system is designed with flexibility and dynamism in mind, allowing for effe
 
 Oh, and about the tutorial... Listen, I'm not a tutorial wizard, but I tried my best to make the learning process less boring. You’ll find a step-by-step guide embedded in the visual novel itself, complete with some attempts at humor. I can’t promise it’s funny I mean, you’ll probably cringe at a few lines but hey, I did my best to keep it interesting. No promises on it being a cool Step-by-step walkthrough. It's just a tutorial with a little personality, that’s all.  
  
+![screenshot0016](https://github.com/user-attachments/assets/6d089f14-4f7c-42a9-ad57-10320d73b881)
 
+![screenshot0015](https://github.com/user-attachments/assets/0fd02035-040d-4ea2-8a12-1b819a67f4bb)
 
 
 ## Key Features 🚀
@@ -51,17 +53,17 @@ default inventory = Inventory(slot_count=21, unlocked_slots=7)
 label start:
 
 # Add Items
-$ inventory.add_item("Potion", 3)
+$ inventory.add_item("Potion", 1)
 $ inventory.add_item("Sword", 1)
 
 # Remove Items
 $ inventory.remove_item("Potion", 1)
 
 # Unlock Slots
-$ inventory.unlock_slots(3)
+$ inventory.unlock_slots(7)
 
 # Increase Slot Capacity
-$ inventory.increase_slot_count(5)
+$ inventory.increase_slot_count(7)
 
 
 ```
