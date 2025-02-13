@@ -4,7 +4,7 @@ This project builds upon my previous work, [Simple Ren'Py Inventory](https://git
 
 This system is designed with flexibility and dynamism in mind, allowing for effective item and slot management. Players can store, organize, and interact with items while also incorporating progression mechanics, like unlocking additional inventory slots as the game moves forward. It’s built for scalability, so whether you’re making a chill visual novel, a dating sim, or even a complex RPG, this should do the trick.  
 
-Oh, and about the tutorial... Listen, I'm not a tutorial wizard, but I tried my best to make the learning process less boring. You’ll find a step-by-step guide embedded in the visual novel itself, complete with some attempts at humor. I can’t promise it’s funny—I mean, you’ll probably cringe at a few lines—but hey, I did my best to keep it interesting. No promises on it being a cool Step-by-step walkthrough. It's just a tutorial with a little personality, that’s all.  
+Oh, and about the tutorial... Listen, I'm not a tutorial wizard, but I tried my best to make the learning process less boring. You’ll find a step-by-step guide embedded in the visual novel itself, complete with some attempts at humor. I can’t promise it’s funny I mean, you’ll probably cringe at a few lines but hey, I did my best to keep it interesting. No promises on it being a cool Step-by-step walkthrough. It's just a tutorial with a little personality, that’s all.  
  
 
 
