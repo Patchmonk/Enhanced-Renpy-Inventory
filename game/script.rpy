@@ -25,7 +25,7 @@ default inventory = Inventory(slot_count=21, unlocked_slots=7)
 # The start of the game
 label start:
     
-    show Grassland
+    show Grassland 
     "Hello friend, welcome to my Enhanced Inventory System tutorial. I'm not sure how you ended up here, but you're in for a treat. If you haven't heard of it, this is the improved version of the simple inventory system."
     "The system relies on two components: a custom notification system and the main inventory system, both nestled in the component folder."
     "So, why is the notification system tangled up with the inventory? Well, I got a bit carried away with my love for fancy sounds and flashy error and success messages. But hey, you can always untangle this mess by editing the code."
