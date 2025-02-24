@@ -107,7 +107,7 @@ This approach ensures that:
 2. **Reusability**: Each component (e.g., Inventory System, Custom Notification System) is standalone and can be reused in other projects.  
 3. **Scalability**: Adding new features or components in the future won’t disrupt the existing structure.  
 
-Now, let us delve into the folder structure itself. Do not be overwhelmed by the detailed folder structure I presented. Simply remember to copy the components folder into your game directory. That is all. This is merely a detailed example.
+- Now, let us delve into the folder structure itself. Do not be overwhelmed by the detailed folder structure I presented. Simply remember to copy the components folder into your game directory. That is all. This is merely a detailed example.
 ---
 
 ### Folder Structure Details  
