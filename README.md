@@ -92,7 +92,70 @@ label start:
     $ inventory.increase_slot_count(7)
 ```
 
+## Folder Structure 📂  
+
+### Why This Structure?  
+The folder structure in this project is designed with **simplicity** and **modularity** in mind. Unlike traditional Ren'Py projects where images, sounds, and scripts are scattered across default folders, this project organizes everything into **self-contained modular components**.  
+
+The goal is to provide a **drag-and-drop, plug-and-play experience**:  
+- Simply copy the `components/` folder into your Ren'Py project.  
+- Initialize the inventory system by declaring the `inventory` variable in your script.  
+- You're done! Everything—images, sounds, scripts—is already pre-configured and ready to use.  
+
+This approach ensures that:  
+1. **Ease of Use**: No need to manually move files around or reorganize assets.  
+2. **Reusability**: Each component (e.g., Inventory System, Custom Notification System) is standalone and can be reused in other projects.  
+3. **Scalability**: Adding new features or components in the future won’t disrupt the existing structure.  
+
+Now, let us delve into the folder structure itself. Do not be overwhelmed by the detailed folder structure I presented. Simply remember to copy the components folder into your game directory. That is all. This is merely a detailed example.
 ---
+
+### Folder Structure Details  
+
+```
+YourGameProject/
+│
+├── game/                     # The main game directory (where all your scripts and assets go)
+│   ├── components/           # Folder for modular components
+│   │   ├── custom_notification/  # Modular component for custom notifications
+│   │   │   ├── audio/        # Sound effects for notifications
+│   │   │   │   ├── add_item_sound.ogg      # Sound effect for adding items
+│   │   │   │   ├── remove_item_sound.ogg   # Sound effect for removing items
+│   │   │   │   └── error_sound.ogg         # Sound effect for errors
+│   │   │   │
+│   │   │   ├── images/       # Images for the notification system
+│   │   │   │   └── gui/      # GUI-related images (e.g., notification popups)
+│   │   │   │       └── notification_bg.png # Background for notifications
+│   │   │   │
+│   │   │   └── custom_notification.rpy     # Python file for the notification logic
+│   │   │
+│   │   └── inventory_system/ # Modular component for the inventory system
+│   │       ├── images/       # Images for the inventory system
+│   │       │   ├── icons/    # Icons for items
+│   │       │   │   ├── apple.png           # Example item icon
+│   │       │   │   └── orange.png          # Example item icon
+│   │       │   │
+│   │       │   └── gui/      # GUI-related images (e.g., inventory UI)
+│   │       │       └── inventory_bg.png    # Background for the inventory screen
+│   │       │
+│   │       ├── inventory.rpy # Python file containing the Inventory class
+│   │       └── screens.rpy   # File for defining the inventory screen
+│   │  
+│   │
+
+Here is an example of how a default game folder should look. It may vary based on your game configuration.
+This is just an example of a default game structure.
+
+│   ├── screens.rpy           # File for defining custom screens (e.g., main menu)
+│   ├── options.rpy           # File for game settings (optional)
+│   └── script.rpy            # Main game script file, Currently I put all my tutorial texted there.
+│
+└── README.md                 # Your project's README file (this file!)
+ 
+   
+```
+
+ 
 
 ## Compatibility & Requirements 🛠️  
 - **Engine**: Ren'Py (Tested on version 8.0 and above)  
