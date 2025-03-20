@@ -26,7 +26,7 @@ default inventory = Inventory(slot_count=21, unlocked_slots=7)
 label start:
     
     show Grassland 
-    "Hello friend, welcome to my Enhanced Inventory System tutorial. I'm not sure how you ended up here, but you're in for a treat. If you haven't heard of it, this is the improved version of the simple inventory system."
+    "Hello friend, welcome to my Enhanced Ren'py Inventory System tutorial. I'm not sure how you ended up here, but you're in for a treat. If you haven't heard of it, this is the improved version of the simple inventory system."
     "The system relies on two components: a custom notification system and the main inventory system, both nestled in the component folder."
     "So, why is the notification system tangled up with the inventory? Well, I got a bit carried away with my love for fancy sounds and flashy error and success messages. But hey, you can always untangle this mess by editing the code."
     "Don't worry it's super easy you can just return nothing in the function where I call the notification in the main inventory functions. "

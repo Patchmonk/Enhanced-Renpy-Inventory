@@ -1,6 +1,6 @@
 screen inventory():
     modal True
-    frame :
+    frame:
         style "inventory_frame"
         hbox:
             imagebutton:
