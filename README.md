@@ -58,6 +58,12 @@ The inventory system is highly customizable and can be adapted to fit any type o
 Whether you’re building a simple dating sim or a complex RPG, this system provides the flexibility you need to create a seamless inventory experience.  
 
 ---
+### 6. Custom notification system for your Renpy inventory
+- Modular notification system and easy to customize.
+- Notifications for error handling and different scenarios.
+- Easy to add sound and custom design notification pop-ups.
+- Super simple notification function to avoid complexity.
+---
 
 ## Why Use This System? 🧐  
 This inventory system is designed to be easy to use, flexible, and (hopefully) not too tedious to learn, thanks to the tutorial. I can’t promise it’ll be a life-changing experience, but it *should* make inventory management in your Ren'Py project a lot smoother.  
