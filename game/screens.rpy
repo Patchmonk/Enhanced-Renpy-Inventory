@@ -353,6 +353,7 @@ screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
 
+
     add gui.main_menu_background
 
     ## This empty frame darkens the main menu.
@@ -658,6 +659,7 @@ screen file_slots(title):
                     spacing gui.page_spacing
 
                     textbutton _("<") action FilePagePrevious()
+                    key "save_page_prev" action FilePagePrevious()
 
                     if config.has_autosave:
                         textbutton _("{#auto_page}A") action FilePage("auto")
@@ -670,7 +672,7 @@ screen file_slots(title):
                         textbutton "[page]" action FilePage(page)
 
                     textbutton _(">") action FilePageNext()
-
+                    key "save_page_next" action FilePageNext()
                 if config.has_sync:
                     if CurrentScreenName() == "save":
                         textbutton _("Upload Sync"):
@@ -725,6 +727,10 @@ screen preferences():
 
     tag menu
 
+    if renpy.mobile:
+        $ cols = 2
+    else:
+        $ cols = 4
     use game_menu(_("Preferences"), scroll="viewport"):
 
         vbox:
@@ -1605,3 +1611,17 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+# #################################################################################################################
+# #██████╗ ███████╗██████╗ ██████╗ ██╗   ██╗     ██████╗        ██████╗ ███████╗███╗   ██╗██████╗ ███████╗██████╗ #
+# #██╔══██╗██╔════╝██╔══██╗██╔══██╗╚██╗ ██╔╝    ██╔════╝        ██╔══██╗██╔════╝████╗  ██║██╔══██╗██╔════╝██╔══██╗#
+# #██████╔╝█████╗  ██████╔╝██████╔╝ ╚████╔╝     ██║  ███╗       ██████╔╝█████╗  ██╔██╗ ██║██║  ██║█████╗  ██████╔╝#
+# #██╔══██╗██╔══╝  ██╔══██╗██╔══██╗  ╚██╔╝      ██║   ██║       ██╔══██╗██╔══╝  ██║╚██╗██║██║  ██║██╔══╝  ██╔══██╗#
+# #██████╔╝███████╗██║  ██║██║  ██║   ██║       ╚██████╔╝██╗    ██████╔╝███████╗██║ ╚████║██████╔╝███████╗██║  ██║#
+# #╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝        ╚═════╝ ╚═╝    ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚═════╝ ╚══════╝╚═╝  ╚═╝#
+# #################################################################################################################
+################################################################################
+## Skipscreen to skip the splash screen
+################################################################################
+screen skip_screen()
+screen scrJokes()

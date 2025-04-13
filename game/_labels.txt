@@ -1,0 +1,103 @@
+
+
+bad_jokes.rpy
+
+
+
+buzz.rpy
+
+label buzz:
+
+
+gui.rpy
+
+## An accent color used throughout the interface to label and highlight text.
+## The position, width, and alignment of the label giving the name of the
+## The position, width, and alignment of the label giving the name of the
+
+
+live2dmod.rpy
+
+
+
+main_menu.rpy
+
+label info_video:
+
+
+menu_screen.rpy
+
+
+
+options.rpy
+
+
+
+screens.rpy
+
+style say_label is default
+style namebox_label is say_label
+    label title
+style game_menu_label is gui_label
+            label "[config.name!t]"
+style about_label is gui_label
+style page_label is gui_label
+                        label _("Display")
+                    label _("Skip")
+                    label _("Text Speed")
+                    label _("Auto-Forward Time")
+                        label _("Music Volume")
+                        label _("Sound Volume")
+                        label _("Voice Volume")
+style pref_label is gui_label
+style radio_label is pref_label
+style check_label is pref_label
+style slider_label is pref_label
+                    label h.who:
+            label _("The dialogue history is empty.")
+style history_label is gui_label
+        label _("Enter")
+        label _("Space")
+        label _("Arrow Keys")
+        label _("Escape")
+        label _("Ctrl")
+        label _("Tab")
+        label _("Page Up")
+        label _("Page Down")
+        label "H"
+        label "S"
+        label "V"
+        label "Shift+A"
+        label _("Left Click")
+        label _("Middle Click")
+        label _("Right Click")
+        label _("Mouse Wheel Up\nClick Rollback Side")
+        label _("Mouse Wheel Down")
+        label _("Right Trigger\nA/Bottom Button")
+        label _("Left Trigger\nLeft Shoulder")
+        label _("Right Shoulder")
+        label _("D-Pad, Sticks")
+        label _("Start, Guide")
+        label _("Y/Top Button")
+style help_label is gui_label
+            label _(message):
+style nvl_label is say_label
+
+
+script.rpy
+
+                if "label " in i:  # Check if the line contains a label
+                    f1.write(i)  # Write the label line to the output file
+label start:
+label check_images:
+    label displayRice:
+    label displayHiyori:
+
+
+skip_screen.rpy
+
+
+
+splashscreen.rpy
+
+label splashscreen:

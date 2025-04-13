@@ -113,9 +113,123 @@
                 }
             },
             {
+                "scope": "renpy.meta.color.#fc8a08",
+                "settings": {
+                    "foreground": "#fc8a08"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.#00448f",
+                "settings": {
+                    "foreground": "#00448f"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.#bd3131",
+                "settings": {
+                    "foreground": "#bd3131"
+                }
+            },
+            {
                 "scope": "renpy.meta.color.#ffffff",
                 "settings": {
                     "foreground": "#ffffff"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.#39e16b98",
+                "settings": {
+                    "foreground": "#39e16b98"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.#ffff2e",
+                "settings": {
+                    "foreground": "#ffff2e"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.#1fb4ff",
+                "settings": {
+                    "foreground": "#1fb4ff"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.#d3d3d3",
+                "settings": {
+                    "foreground": "#d3d3d3"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.#fff",
+                "settings": {
+                    "foreground": "#fff"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.#ffff",
+                "settings": {
+                    "foreground": "#ffff"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.#004",
+                "settings": {
+                    "foreground": "#004"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.#0044",
+                "settings": {
+                    "foreground": "#0044"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.#c6005c",
+                "settings": {
+                    "foreground": "#c6005c"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.#007fca",
+                "settings": {
+                    "foreground": "#007fca"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.#fd9001",
+                "settings": {
+                    "foreground": "#fd9001"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.#00fff6",
+                "settings": {
+                    "foreground": "#00fff6"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.#f169ff",
+                "settings": {
+                    "foreground": "#f169ff"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.#00ff00",
+                "settings": {
+                    "foreground": "#00ff00"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.#ff0080",
+                "settings": {
+                    "foreground": "#ff0080"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.#e14c3c",
+                "settings": {
+                    "foreground": "#e14c3c"
                 }
             }
         ]

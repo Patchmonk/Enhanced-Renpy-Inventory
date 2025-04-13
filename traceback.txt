@@ -1,40 +1,35 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "renpy/common/00start.rpy", line 83, in _init_language
-    renpy.change_language(language)
-  File "game/components/custom_notification/custom_notification_screen.rpy", line 13, in <module>
-    font bold
-NameError: name 'bold' is not defined
+While running game code:
+  File "game/options.rpy", line 237, in script
+    init python:
+  File "game/options.rpy", line 237, in script
+    init python:
+  File "game/options.rpy", line 262, in <module>
+    build.classify('**.rpyc')
+TypeError: classify() missing 1 required positional argument: 'file_list'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\bootstrap.py", line 359, in bootstrap
+  File "C:\renpy\renpy\bootstrap.py", line 359, in bootstrap
     renpy.main.main()
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\main.py", line 652, in main
-    run(restart)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\main.py", line 75, in run
-    renpy.translation.init_translation()
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\translation\__init__.py", line 702, in init_translation
-    renpy.store._init_language() # type: ignore
-  File "renpy/common/00start.rpy", line 83, in _init_language
-    renpy.change_language(language)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\translation\__init__.py", line 796, in change_language
-    new_change_language(tl, language)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\translation\__init__.py", line 748, in new_change_language
-    i.apply()
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\ast.py", line 2800, in apply
-    value = renpy.python.py_eval(expr)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Apps\Renpy\renpy-8.3.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/components/custom_notification/custom_notification_screen.rpy", line 13, in <module>
-    font bold
-NameError: name 'bold' is not defined
+  File "C:\renpy\renpy\main.py", line 541, in main
+    renpy.game.context().run(node)
+  File "game/options.rpy", line 237, in script
+    init python:
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/options.rpy", line 237, in script
+    init python:
+  File "C:\renpy\renpy\ast.py", line 834, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\renpy\renpy\python.py", line 1187, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/options.rpy", line 262, in <module>
+    build.classify('**.rpyc')
+TypeError: classify() missing 1 required positional argument: 'file_list'
 
 Windows-10-10.0.19045 AMD64
-Ren'Py 8.3.3.24111502
-Advanced renpy inventory 1.2.5
-Thu Jan 23 00:30:47 2025
+Ren'Py 8.3.8.25031801+nightly
+Patchmonk's Advanced Inventory System 1.2.7 1.2.7
+Sun Apr 13 05:44:06 2025

@@ -4,6 +4,21 @@
 ## them. Lines beginning with a single '#' mark are commented-out code, and you
 ## may want to uncomment them when appropriate.
 
+## Folder where renpy will search for all except scripts
+
+define config.search_prefixes = [
+    "",
+    "art/",
+    "art/fonts/",
+    "audio/",
+    "components/notification/audio/",
+    "components/notification/images/gui",
+    "components/inventory_system/images/gui/",
+    "components/inventory_system/images/icons/",
+    "images/",
+    "screenshots/",
+    "video/",
+    ]
 
 ## Basics ######################################################################
 
@@ -12,24 +27,86 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("Advanced renpy inventory")
-
+define config.name = _("Patchmonk's Advanced Inventory System 1.2.7")
+define config.developer = True
+define config.debug_image_cache = False
 
 ## Determines if the title given above is shown on the main menu screen. Set
 ## this to False to hide the title.
 
 define gui.show_name = True
 
-
+define config.log = False
+define config.log_gl_shaders = False
 ## The version of the game.
 
-define config.version = "1.2.5"
+define config.version = "1.2.7"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
+# #################################################################################################################
+# #██████╗ ███████╗██████╗ ██████╗ ██╗   ██╗     ██████╗        ██████╗ ███████╗███╗   ██╗██████╗ ███████╗██████╗ #
+# #██╔══██╗██╔════╝██╔══██╗██╔══██╗╚██╗ ██╔╝    ██╔════╝        ██╔══██╗██╔════╝████╗  ██║██╔══██╗██╔════╝██╔══██╗#
+# #██████╔╝█████╗  ██████╔╝██████╔╝ ╚████╔╝     ██║  ███╗       ██████╔╝█████╗  ██╔██╗ ██║██║  ██║█████╗  ██████╔╝#
+# #██╔══██╗██╔══╝  ██╔══██╗██╔══██╗  ╚██╔╝      ██║   ██║       ██╔══██╗██╔══╝  ██║╚██╗██║██║  ██║██╔══╝  ██╔══██╗#
+# #██████╔╝███████╗██║  ██║██║  ██║   ██║       ╚██████╔╝██╗    ██████╔╝███████╗██║ ╚████║██████╔╝███████╗██║  ██║#
+# #╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝        ╚═════╝ ╚═╝    ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚═════╝ ╚══════╝╚═╝  ╚═╝#
+# #################################################################################################################
 
 define gui.about = _p("""
+
+Patchmonk's Advanced Inventory System 1.2.7 is one of the greatest RenPy inventory systems you will find on the internet.
+
+Featuring a stackable system with an advanced notification system, PAIS will always tell you what is happening both by visuals and sounds.
+
+Higly customizable, it show cases class creation and management, modularity and how to incorporate the nice-but-useless stuff.
+
+The inventory uses image buttons which for now do simple stuff and use tooltips.
+
+All of this in Jip-and-Janneke style: this could very well be the next best thing to install right after you tried one of the RenPy tutorials.
+
+Patchmonk and Berry G. Bender's common goal was to create a system that would work after installation without any hassles.
+
+This tutorial will show:
+
+- Adding items
+
+- Removing items
+
+- Increasing slot count
+
+- Locking slots
+
+- Unlocking slots
+
+- Customizing its look and feel
+
+- Customizing the notification system
+
+- Adding a splashscreen, skipscreen, webm video, live2d integration
+
+- All is neatly covered and documented
+
+Please take note of the all the comments we placed into the source code.
+
+PAIS 1.2.7 is thoroughly tested on both Dutch and English Windows 10 at 1920 x 1080 resolution.(also UHD but we focused on HD)
+
+It was edited by Microsoft Visual Studio in UTF-8 with BOM (whatever that entails).
+
+It is believed to work flawlessly. That having said, I'm certainly not a RenPy expert so where I encountered code I did not
+
+understand I simply placed a comment to acknowledge that. (this was easier than to figure each and every line of code out :)
+
+Credits go to Patchmonk - Creator, author and designer of PAIS 1.2.7 - responsible for all the rocket science
+
+Berry G. Bender - Assistant Manager - responsible for most nice-but-useless graphics (art folder and yeah nice isn't the word I guess ;)
+
+By no means any of this should be considered competitive nor a show off or whatever. It will hopefully save you some time searching for the solutions provided.
+
+Regards Berry G. Bender
+
+Ps be sure to contact us in case you bump into any problems we will do our utmost to solve it.
 """)
 
 
@@ -37,7 +114,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "Advancedrenpyinventory"
+define build.name = "pais"
 
 
 ## Sounds and music ############################################################
@@ -143,7 +220,7 @@ default preferences.afm_time = 15
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "Advancedrenpyinventory-1692804371"
+define config.save_directory = "pais"
 
 
 ## Icon ########################################################################
@@ -182,6 +259,7 @@ init python:
     build.classify('**.bak', None)
     build.classify('**/.**', None)
     build.classify('**/#**', None)
+    build.classify('**.rpyc', None)
     build.classify('**/thumbs.db', None)
 
     ## To archive files, classify them as 'archive'.
