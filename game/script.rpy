@@ -117,7 +117,7 @@ image E_unlock = "screenshots/e_unlock.png"
 image F_lock = "screenshots/f_lock.png"
 image G_inc = "screenshots/g_inc.png"
 image bgb = "art/bg_b.png"
-## this video serves as background and by declaring it like this renpy treats it as an image, exactly what we want
+## this video serves as background and by declaring it like this renpy treats it as an image
 image grassland_decor_full = Movie(channel="movie_dp", play="art/grassland_full.webm")
 
 ## Declare characters used by this game. The color argument colorizes the name of the character.
