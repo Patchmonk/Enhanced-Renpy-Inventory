@@ -1,3 +1,16 @@
+# ==================================
+# == 🎒 Inventory System Setup ==
+# ==================================
+# 💡 Here we create the actual inventory! It's like giving the player a backpack.
+# Initializing the inventory system in Ren'Py. The most common approach is to initialize this variable within the Script RPY file.
+# There are two parameters in the default inventory variable: `slot_count=21` (total slots) and `unlocked_slots=7` (initial unlocked slots).  
+default inventory = Inventory(slot_count=21, unlocked_slots=7) # we just introduce the Inventory system to Renpy.
+
+
+# ================================ 
+# 💼 Inventory system custom code 
+# ================================ 
+
 init python:
     class Inventory:
         def __init__(self, slot_count=21, unlocked_slots=7):
@@ -8,7 +21,7 @@ init python:
 
         def add_item(self, item, quantity=1):
             if self.unlocked_slots == 0:
-                show_custom_notification("No unlocked slots available.", sound_type="error")
+                pm_notify("No unlocked slots available.", sound_type="error")
                 return
 
             remaining_quantity = quantity
@@ -35,11 +48,11 @@ init python:
             
             # If there are still remaining items, show a notification
             if remaining_quantity > 0:
-                show_custom_notification(f"Could not add {remaining_quantity} {item} - no slots available.", sound_type="error")
+                pm_notify(f"Could not add {remaining_quantity} {item} - no slots available.", sound_type="error")
 
         def remove_item(self, item, quantity=1):
             if quantity <= 0:
-                show_custom_notification("Invalid quantity to remove.", sound_type="error")
+                pm_notify("Invalid quantity to remove.", sound_type="error")
                 return
 
             original_quantity = quantity
@@ -56,10 +69,10 @@ init python:
                         break
 
             if quantity > 0:
-                show_custom_notification(f"Could not fully remove {original_quantity} {item} - insufficient quantity.", sound_type="error")
+                pm_notify(f"Could not fully remove {original_quantity} {item} - insufficient quantity.", sound_type="error")
                 self.sort_inventory()  # Call sort_inventory after removal
             else:
-                show_custom_notification(f"{original_quantity - quantity} {item} Removed.", sound_type="remove")
+                pm_notify(f"{original_quantity - quantity} {item} Removed.", sound_type="remove")
                 self.sort_inventory()  # Call sort_inventory after removal
 
         def sort_inventory(self):
@@ -77,12 +90,12 @@ init python:
         def increase_slot_count(self, additional_slots):
             self.slot_count += additional_slots
             self.slots.extend([{} for _ in range(additional_slots)])
-            show_custom_notification(f"Slot count increased by {additional_slots}!", sound_type="success")
+            pm_notify(f"Slot count increased by {additional_slots}!", sound_type="success")
 
 
         def unlock_slots(self, count):
             self.unlocked_slots = min(self.slot_count, self.unlocked_slots + count)
-            show_custom_notification(f"Unlocked {count} new slots.", sound_type="success")
+            pm_notify(f"Unlocked {count} new slots.", sound_type="success")
 
 
         def is_slot_unlocked(self, slot):
@@ -92,10 +105,18 @@ init python:
         def lock_slots(self, count):
             if count <= self.unlocked_slots:
                 self.unlocked_slots -= count
-                # show_custom_notification(f"Locked {count} slots.", sound_type="success")
-                show_custom_notification(" Warning: slots are locked!", sound_type="error")
+                # pm_notify(f"Locked {count} slots.", sound_type="success")
+                pm_notify(" Warning: slots are locked!", sound_type="error")
             else:
-                show_custom_notification("Not enough unlocked slots to lock.", sound_type="error")
+                pm_notify("Not enough unlocked slots to lock.", sound_type="error")
 
         def get_items(self):
             return self.slots
+ 
+
+        def has_item(self, item, quantity=1):
+            total = 0
+            for slot in self.slots:
+                if item in slot:
+                    total += slot[item]
+            return total >= quantity  # Returns True if inventory has at least 'quantity' of item
