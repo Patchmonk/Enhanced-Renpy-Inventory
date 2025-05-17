@@ -4,7 +4,7 @@ This project builds upon my previous work, [Simple Ren'Py Inventory](https://git
 
 This system is designed with flexibility and dynamism in mind, allowing for effective item and slot management. Players can store, organize, and interact with items while also incorporating progression mechanics, like unlocking additional inventory slots as the game moves forward. It’s built for scalability, so whether you’re making a chill visual novel, a dating sim, or even a complex RPG, this should do the trick.  
 
-Oh, and about the tutorial... Listen, I'm not a tutorial wizard, but I tried my best to make the learning process less boring. You’ll find a step-by-step guide embedded in the visual novel itself, complete with some attempts at humor. I can’t promise it’s funny—I mean, you’ll probably cringe at a few lines—but hey, I did my best to keep it interesting. No promises on it being a cool step-by-step walkthrough. It's just a tutorial with a little personality, that’s all.  
+Oh, and about the tutorial... Listen, I'm not a tutorial wizard, but I tried my best to make the learning process less boring. You’ll find a step-by-step guide embedded in the visual novel itself, complete with some attempts at humor. I can’t promise it’s funny I mean, you’ll probably cringe at a few lines but hey, I did my best to keep it interesting. No promises on it being a cool step-by-step walkthrough. It's just a tutorial with a little personality, that’s all.  
 
 ![screenshot0016](https://github.com/user-attachments/assets/6d089f14-4f7c-42a9-ad57-10320d73b881)  
 ![screenshot0015](https://github.com/user-attachments/assets/0fd02035-040d-4ea2-8a12-1b819a67f4bb)  
@@ -58,6 +58,14 @@ The inventory system is highly customizable and can be adapted to fit any type o
 Whether you’re building a simple dating sim or a complex RPG, this system provides the flexibility you need to create a seamless inventory experience.  
 
 ---
+### 6. Custom dynamic notifications with Sound: for your Renpy inventory
+![Screenshot 2025-04-02 213841](https://github.com/user-attachments/assets/1550d871-7aca-4c56-8450-66b97d322cb7)
+- Modular notification system and easy to customize.
+- Dynamic notifications for error handling and different scenarios.
+- Easy to add sound and custom design notification pop-ups.
+- Super simple notification function to avoid complexity.
+---
+
 
 ## Why Use This System? 🧐  
 This inventory system is designed to be easy to use, flexible, and (hopefully) not too tedious to learn, thanks to the tutorial. I can’t promise it’ll be a life-changing experience, but it *should* make inventory management in your Ren'Py project a lot smoother.  
