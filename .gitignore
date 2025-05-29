@@ -176,3 +176,5 @@ renpy/uguu/gl.pyi
 renpy/uguu/uguu.pyi
 game/backup.md
 game/test.rpy
+game/cache/
+ 
