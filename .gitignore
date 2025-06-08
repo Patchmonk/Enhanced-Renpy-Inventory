@@ -178,3 +178,6 @@ game/backup.md
 game/test.rpy
 game/cache/
  
+log.txt
+*.txt
+errors.txt
