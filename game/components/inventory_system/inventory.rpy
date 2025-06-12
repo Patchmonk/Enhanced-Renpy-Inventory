@@ -105,7 +105,7 @@ init python:
         def lock_slots(self, count):
             if count <= self.unlocked_slots:
                 self.unlocked_slots -= count
-                # pm_notify(f"Locked {count} slots.", sound_type="success")
+                # pm_notify(f"Locked {count} slots.", sound_type="error")
                 pm_notify(" Warning: slots are locked!", sound_type="error")
             else:
                 pm_notify("Not enough unlocked slots to lock.", sound_type="error")
