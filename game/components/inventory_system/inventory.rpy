@@ -1,5 +1,6 @@
-# Version 1.6 – Inventory Consistency Update
-
+# --------------------------------------------------
+# Version 1.6 – Inventory Consistency Update. 
+# --------------------------------------------------
 # Reason:
 # This describes exactly what happened without exposing technical jargon like “case normalization”. 
 # It’s clear and straightforward for players to understand that the system will now treat “Potion” and “potion” as the same item, 
