@@ -1,3 +1,11 @@
+# Version 1.6 – Inventory Consistency Update
+
+# Reason:
+# This describes exactly what happened without exposing technical jargon like “case normalization”. 
+# It’s clear and straightforward for players to understand that the system will now treat “Potion” and “potion” as the same item, 
+# which is a common expectation in inventory systems. The term “case normalization” might be confusing for non-technical players, 
+# while the new description directly communicates the change in behavior.
+
 # ==================================
 # == 🎒 Inventory System Setup ==
 # ==================================
@@ -13,15 +21,29 @@ default inventory = Inventory(slot_count=21, unlocked_slots=7) # we just introdu
 
 init python:
     class Inventory:
+
         def __init__(self, slot_count=21, unlocked_slots=7):
             self.slot_count = slot_count
             self.unlocked_slots = unlocked_slots
             self.max_items_per_slot = 99
             self.slots = [{} for _ in range(self.slot_count)]
 
+        # ==================================
+        # Normalize item keys (Case Fix)
+        # ==================================
+        def _normalize_item(self, item):
+            return str(item).strip().lower()
+
+
         def add_item(self, item, quantity=1):
+
+            item = self._normalize_item(item)
+
             if self.unlocked_slots == 0:
                 pm_notify("No unlocked slots available.", sound_type="error")
+                return
+
+            if quantity <= 0:
                 return
 
             remaining_quantity = quantity
@@ -30,10 +52,12 @@ init python:
             for slot in range(self.unlocked_slots):
                 if item in self.slots[slot]:
                     space_left = self.max_items_per_slot - self.slots[slot][item]
+
                     if space_left > 0:
                         add_quantity = min(remaining_quantity, space_left)
                         self.slots[slot][item] += add_quantity
                         remaining_quantity -= add_quantity
+
                         if remaining_quantity == 0:
                             return
 
@@ -41,8 +65,10 @@ init python:
             for slot in range(self.unlocked_slots):
                 if not self.slots[slot]:
                     add_quantity = min(remaining_quantity, self.max_items_per_slot)
+
                     self.slots[slot][item] = add_quantity
                     remaining_quantity -= add_quantity
+
                     if remaining_quantity == 0:
                         return
             
@@ -50,7 +76,10 @@ init python:
             if remaining_quantity > 0:
                 pm_notify(f"Could not add {remaining_quantity} {item} - no slots available.", sound_type="error")
 
+
         def remove_item(self, item, quantity=1):
+            item = self._normalize_item(item)
+
             if quantity <= 0:
                 pm_notify("Invalid quantity to remove.", sound_type="error")
                 return
@@ -62,6 +91,7 @@ init python:
                     if quantity >= self.slots[slot][item]:
                         quantity -= self.slots[slot][item]
                         del self.slots[slot][item]
+
                     else:
                         self.slots[slot][item] -= quantity
                         quantity = 0
@@ -75,15 +105,14 @@ init python:
                 pm_notify(f"{original_quantity - quantity} {item} Removed.", sound_type="remove")
                 self.sort_inventory()  # Call sort_inventory after removal
 
+
         def sort_inventory(self):
             sorted_slots = [{} for _ in range(self.slot_count)]
             current_slot = 0
-
             for slot in range(self.slot_count):
                 if self.slots[slot]:
                     sorted_slots[current_slot] = self.slots[slot]
                     current_slot += 1
-
             self.slots = sorted_slots
 
 
@@ -110,11 +139,12 @@ init python:
             else:
                 pm_notify("Not enough unlocked slots to lock.", sound_type="error")
 
+
         def get_items(self):
             return self.slots
- 
-
+        
         def has_item(self, item, quantity=1):
+            item = self._normalize_item(item)
             total = 0
             for slot in self.slots:
                 if item in slot:
